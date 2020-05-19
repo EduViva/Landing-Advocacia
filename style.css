@@ -17,6 +17,9 @@
     #navbarNavAltMarkup{
         justify-content: center;
     }
+    .contact-upper, .fazem{
+        margin-left: 6%;
+    }
 }
 
 @media(max-width: 768px){
@@ -39,6 +42,14 @@
     }
     .row-contact-home{
         flex-direction: column-reverse;
+    }
+    .contact-upper{
+        margin-top: 18vh;
+        margin-bottom: 25px;
+    }
+    #container-contact-home{
+        padding-left: 50px;
+        padding-right: 50px;
     }
 }
 
@@ -100,12 +111,42 @@ section{
 
 /*Section contact home*/
 #container-contact-home{
-    padding-left: 50px;
-    padding-right: 50px;
+    text-align: center;
 }
 
 .fazem{
-    text-align: center;
     border: 1px solid black;
-    padding: 5px;
+    padding: 8px;
+}
+
+.contact-upper{
+    padding: 8px;
+    border: 1px solid black
+}
+
+.contact-home input{
+    border: 1px solid black;
+    border-radius: 3px;
+    outline: none;
+    padding: 7px;
+    background: transparent;
+    margin-top: 12px;
+    text-align: center;
+}
+
+.contact-home button{
+    margin-top: 12%;
+    height: 38px;
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 3px;
+    transition: .3s linear;
+    font-size: 13pt;
+}
+
+.contact-home button:hover{
+    background: black;
+    border-color: #D62A2F;
+    color: white;
+    border-radius: 3px;
 }

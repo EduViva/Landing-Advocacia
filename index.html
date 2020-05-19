@@ -45,14 +45,14 @@
     </nav>
 
 
-
+<!--#D62A2F-->
     <section class="section section-contact-home" style="padding-top: 9%;">
 
         <div class="container-fluid" id="container-contact-home">
-            <div class="row row-contact-home">
-                <div style="background: pink; height: 50vh;" class="col-sm-7 fazem">
+            <div class="row row-contact-home" >
+                <div class="col-md-7 fazem">
                 
-                    <h3>O que fazemos</h3>
+                    <h3>O que fazemos de melhor</h3>
 
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-pause="hover">
                         
@@ -64,7 +64,7 @@
 
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="..." class="d-block w-100" alt="...">
+                                <img src="/sources/imagem.png" class="d-block" style="height: 250px; width: 50%; margin: auto;" alt="Direito Civil">
                             </div>
                             <div class="carousel-item">
                                 <img src="..." class="d-block w-100" alt="...">
@@ -85,7 +85,21 @@
                     </div>
                 
                 </div>
-                <div style="background: #dcdcdc; height: 50vh;" class="col-sm-4 offset-md-1"></div>
+                <div class="col-md-3 contact-home contact-upper">
+                    
+                    <h3>Precisando de ajuda?</h3>
+
+                    <form class="contact-form" id="contact-upper" onsubmit="contactSubmited(event)">
+
+                        <input type="text" name="nome" placeholder="Nome" class="col-9 col-md-9 input-nome input-upper" required>
+                        <input type="tel" name="telefone" placeholder="Telefone" class="col-9 col-md-9 input-tel input-upper" required>    
+                        
+                        <button class="col-9 col-md-9 submit-form input-upper" name="enviar" type="submit">Enviar</button>
+                        <p id="response-form-upper"></p>
+
+                    </form>
+                
+                </div>
             </div>
         </div>
 
