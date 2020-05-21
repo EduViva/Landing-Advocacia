@@ -22,11 +22,15 @@ $(document).on("scroll",function(){
 				'background':'rgba(255,255,255,.8)',
 				'box-shadow':'-2px 1.5px 20px black',
 			});
+			$('.nav-item').addClass("scrolled");
+            $('.nav-active').css('color','var(--complementar-1)');
         } else {
             $('.navbar').css({
 				'background':'transparent',
-				'background-image':'linear-gradient(to bottom, purple, rgba(250,250,250,0))',
+				'background-image':' linear-gradient(to bottom, var(--secondary-color), var(--primary-color))',
 			});
+			$('.nav-item').removeClass("scrolled");
+            $('.nav-active').css('color','rgba(0,0,0,.9)');
         }
 	}
 
@@ -41,27 +45,24 @@ $(document).on("scroll",function(){
 				"height":"0",
 				"width":"0"
             });
-            /* 
-            Arrumar dependendo da cor da navbar
-			$('.nav-item').css('color','rgba(0,0,0,.7)');
-			$('.nav-item:hover').css('color','rgb(0,0,0)');
-            $('.active').css('color','rgba(0,0,0,.9)');
-            */
+            
+			$('.nav-item').addClass("scrolled");
+            $('.nav-active').css('color','var(--complementar-1)');
+        
 		} else {
 			$('.navbar').css({
 				'background':'transparent',
-				'background-image':'linear-gradient(to bottom, purple, rgba(250,250,250,0))',
+				'background-image':' linear-gradient(to bottom, var(--secondary-color), var(--primary-color))',
 				'height':'81px',
 			});
 			$('.img-logo').css({
 				"height":"52px",
 				"width":"52px"
             });
-            /*
-			$('.nav-item').css('color','rgba(0,0,0,.7)');
-			$('.nav-item:hover').css('color','rgba(0,0,0,.5)');
-            $('.active').css('color','rgba(0,0,0,.9)');
-            */
+            
+			$('.nav-item').removeClass("scrolled");
+            $('.nav-active').css('color','rgba(0,0,0,.9)');
+            
 		}
 	}
 

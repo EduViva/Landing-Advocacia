@@ -17,11 +17,23 @@
     #navbarNavAltMarkup{
         justify-content: center;
     }
+
+    /*Section contatc*/
     .contact-upper, .fazem{
         margin-left: 6%;
     }
+    .fazem{
+        border: 1px solid black;
+    }
+    .carousel-item{
+        background-repeat: no-repeat;
+    }
+   
+    .contact-form{
+        margin-top: 10%;
+    }
 }
-
+/*rgba(var(--secondary-color), 1);*/
 @media(max-width: 768px){
     #navbarNavAltMarkup{
         margin: -5px -4%;
@@ -46,11 +58,10 @@
     .contact-upper{
         margin-top: 18vh;
         margin-bottom: 25px;
+        margin-left: auto;
+        margin-right: auto;
     }
-    #container-contact-home{
-        padding-left: 50px;
-        padding-right: 50px;
-    }
+   
 }
 
 *{
@@ -58,6 +69,15 @@
     padding: 0;
     box-sizing: border-box;
     /*font-family: 'Montserrat', sans-serif;*/
+    --primary-color: #D62A2F;
+    --secondary-color: #262626;
+    --complementar-1: #931F1D;
+    --complementar-2: #6D7275;
+    --last-color: #FFFBDB;
+}
+
+body{
+    background-color: var(--last-color);
 }
 
 /*Setando scrollbar*/
@@ -79,19 +99,18 @@ nav a h2{
     margin-left: 12px;
 }
 
-/*Topbar nav*/
+/*Topbar nav rgba(255, 251, 219)*/
 nav{
-    background-image: linear-gradient(to bottom, purple, rgba(250,250,250,0));
-    box-shadow: -2px 1.5px 20px purple;
+    background-image: linear-gradient(to bottom, var(--secondary-color), var(--primary-color));
+    /*box-shadow: -2px 1.5px 20px var(--complementar-2);*/
     position: fixed !important;
     width: 100%;
-    font-size: 14.5pt;
-    font-weight: bold;
+    font-size: 13.5pt;
     z-index: 99;
 }
 
 .nav-item{
-    color: rgba(0,0,0,.6);
+    color: var(--last-color);
     transition: .2s;
 }
 
@@ -100,8 +119,13 @@ nav{
     transform: scale(1.05);
 }
 
-.active{
+.nav-active{
     color: rgba(0,0,0,.9);
+}
+
+.scrolled{
+    color: black;
+    font-weight: bold;
 }
 
 /*Sections*/
@@ -115,17 +139,20 @@ section{
 }
 
 .fazem{
-    border: 1px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
     padding: 8px;
+    height: 309px;
 }
 
 .contact-upper{
     padding: 8px;
-    border: 1px solid black
+    border: 1px solid black;
+    height: 309px;
 }
 
 .contact-home input{
-    border: 1px solid black;
+    border: 1px solid var(--secondary-color);
     border-radius: 3px;
     outline: none;
     padding: 7px;
@@ -137,16 +164,39 @@ section{
 .contact-home button{
     margin-top: 12%;
     height: 38px;
-    background: transparent;
-    border: 1px solid black;
+    background: var(--primary-color);
+    border: 1px solid var(--secondary-color);
     border-radius: 3px;
     transition: .3s linear;
     font-size: 13pt;
 }
 
 .contact-home button:hover{
-    background: black;
-    border-color: #D62A2F;
+    background: var(--secondary-color);
+    border-color: var(--complementar-1);
     color: white;
     border-radius: 3px;
+}
+
+.carousel-item{
+    width: 100%;
+    height: 220px;
+    color: var(--last-color);
+    position: relative;
+    
+}
+
+.carousel-item h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    font-size: 38pt;
+}
+
+#img-1{
+    background-image: url("sources/blurred-direito\ civil.png");  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
