@@ -7,7 +7,32 @@ $(function(){
 
         document.getElementsByClassName('social')[0].remove();
 
-    }
+	}
+	
+	$('.multiple-items').slick({
+		dots: true,
+		infinite: true,
+		slidesToShow: 5,
+		slidesToScroll: 2,
+		responsive: [
+			{
+			  breakpoint: 1024,
+			  settings: {
+				slidesToShow: 4,
+				slidesToScroll: 3,
+				infinite: true,
+				dots: true
+			  }
+			},
+			{
+				breakpoint: 600,
+				settings: {
+				  slidesToShow: 2.5,
+				  slidesToScroll: 2.5
+				}
+			}
+		]
+	});
 
 })
 
