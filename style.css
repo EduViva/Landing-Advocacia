@@ -32,6 +32,19 @@
     .contact-form{
         margin-top: 10%;
     }
+
+    #middle-text{
+        bottom: 27%;
+        left: 20%;
+    }
+
+    /*section clientes*/
+    .slider-clientes{
+        padding-top: 21.5vh;
+    }
+    .slick-dots li{
+        margin-top: 25px;
+    }
 }
 /*rgba(var(--secondary-color), 1);*/
 @media(max-width: 768px){
@@ -61,7 +74,18 @@
         margin-left: auto;
         margin-right: auto;
     }
-   
+    #middle-text{
+        bottom: 20%;
+        left: 0;
+        font-size: 18pt;
+    }
+    /*section clientes*/
+    .slider-clientes{
+        padding-top: 20vh;
+    }
+    .slick-dots li{
+        margin-top: 20px;
+    }
 }
 
 *{
@@ -78,6 +102,7 @@
 
 body{
     background-color: var(--last-color);
+    overflow-x: hidden;
 }
 
 /*Setando scrollbar*/
@@ -203,16 +228,27 @@ section{
 }
 
 /*Middle text*/
+#img-bg{
+    background: url('/sources/direito_civil.jpg') no-repeat center;
+    background-attachment: fixed;
+    height: 25vh;
+    width: 100%;
+    margin-top: 15vh;
+    position: relative;
+}
+
 #middle-text{
     text-align: center;
-    margin-top: 25vh;
-    margin-bottom: 25vh;
+    z-index: 200;
+    position: absolute;
+    margin: auto;
+    color: var(--last-color);
 }
 
 /*Section clientes*/
 .section-clientes{
     text-align: center;
-   
+    
 }
 
 .slider-clientes{
@@ -220,10 +256,6 @@ section{
     height: 67vh;
 }
 
-.multiple-items{
-    position: relative;
-    margin-top: 20%;
-}
 
 /*Slick plugin*/
 .slick-arrow{
@@ -233,8 +265,8 @@ section{
 .slick-dots li{
     position: relative;
     display: inline-block;
-    width: 10px;
-    height: 10px;
+    width: 6px;
+    height: 6px;
     margin: 0 9px;
     padding: 0;
 }
@@ -243,8 +275,8 @@ section{
     font-size: 0;
     line-height: 0;
     display: block;
-    width: 10px;
-    height: 10px;
+    width: 6px;
+    height: 6px;
     padding: 5px;
     border-radius: 50%;
     cursor: pointer;
