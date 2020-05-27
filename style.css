@@ -45,6 +45,11 @@
     .slick-dots li{
         margin-top: 25px;
     }
+    /*section equipe*/
+    .text-equipe{
+        margin-left: -30px;
+        margin-right: 20px;
+    }
 }
 /*rgba(var(--secondary-color), 1);*/
 @media(max-width: 768px){
@@ -86,6 +91,25 @@
     .slick-dots li{
         margin-top: 20px;
     }
+    .img-equipe img{
+        display: none;
+    }
+    .text-equipe{
+        background-image: url(sources/equipe-exemplo.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 150%;
+        height: 40vh;
+        width: 95%;
+        margin: auto;
+    }
+    .text-equipe p{
+        margin-top: 7%;
+        font-weight: bold;
+    }
+    #text-equipe-1{
+        display: none;
+    }
 }
 
 *{
@@ -101,7 +125,7 @@
 }
 
 body{
-    background-color: var(--last-color);
+    background-color: whitesmoke;
     overflow-x: hidden;
 }
 
@@ -248,7 +272,6 @@ section{
 /*Section clientes*/
 .section-clientes{
     text-align: center;
-    
 }
 
 .slider-clientes{
@@ -288,4 +311,9 @@ section{
 .slick-active button{
     background: black !important;
 }
-/*end slick plugin*/
+
+/*Section equipe (home)*/
+.img-equipe img{
+    width: 100%;
+    height: 100%;
+}
