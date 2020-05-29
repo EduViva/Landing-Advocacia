@@ -3,6 +3,7 @@ var position = $(window).scrollTop();
 
 $(function(){
 	lazyload();
+	
     if(window.matchMedia('(max-width: 768px)').matches){
 
         document.getElementsByClassName('social')[0].remove();
