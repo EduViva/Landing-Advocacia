@@ -347,3 +347,31 @@ section{
 .duvida-item:nth-child(even){
     background: #EEE;
 }
+
+/*Section contact footer*/
+.section-contact-footer{
+    height: 100vh;
+    background-color: var(--secondary-color);
+    /*background-image: linear-gradient(to bottom, white, var(--secondary-color));*/
+    margin-top: 25px;
+}
+
+.contact-board{
+    height: 67vh;
+    width: 100vw;
+    background-color: white;
+}
+
+.dados{
+    height: 50%;
+    text-align: center;
+}
+
+.map-row{
+    margin-top: 10%;
+}
+
+.whats-row{
+    margin-top: 10%;
+    align-items: center;
+}

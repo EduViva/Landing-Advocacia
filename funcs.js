@@ -79,7 +79,7 @@ $(document).on("scroll",function(){
 			$('.navbar').css({
 				'background':'transparent',
 				'background-image':' linear-gradient(to bottom, var(--secondary-color), var(--primary-color))',
-				'height':'81px',
+				'height':'68px',
 			});
 			$('.img-logo').css({
 				"height":"52px",
