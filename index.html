@@ -276,10 +276,28 @@
                             
                         </div>
 
-                        <div class="">a</div>
-                        <div class="col-md col-sm-12 offset-md-1">
+                        <div class="separator"></div>
+                        <div class="col-md col-sm-12">
                             <div class="row">
-                                <div class="col-12"></div>
+                                <div class="col-10 col-form-down">
+                                    <form class="contact-form" id="contact-down" onsubmit="contactSubmited(event)" netlify>
+                                        
+                                        <div class="label-float">
+                                            <input type="text" name="nome" placeholder=" " class="col-9 col-md-9 input-nome input-down" required>
+                                            <label>Nome</label>
+                                        </div>
+                                        <div class="label-float">
+                                            <input type="tel" name="telefone" autocomplete="tel-national" placeholder=" " class="col-9 col-md-9 input-tel input-down" required>
+                                            <label>Telefone</label>
+                                        </div>
+        
+                                        <textarea name="mensagem" rows="5" placeholder="Mensagem" class="input input-msg col-9 col-md-9"></textarea>
+
+                                        <button class="col-9 col-md-9 submit-form input-down" name="enviar" type="submit">Enviar</button>
+                                        <p id="response-form-down"></p>
+
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>

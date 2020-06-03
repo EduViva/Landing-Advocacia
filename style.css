@@ -29,7 +29,7 @@
         background-repeat: no-repeat;
     }
    
-    .contact-form{
+    #contact-upper{
         margin-top: 10%;
     }
 
@@ -213,7 +213,7 @@ section{
     background: var(--secondary-color);
 }
 
-.contact-home input{
+.contact-form input{
     border: 1px solid var(--complementar-2);
     border-radius: 3px;
     outline: none;
@@ -223,8 +223,12 @@ section{
     text-align: center;
 }
 
-.contact-home button{
+.contact-upper button{
     margin-top: 12%;
+}
+
+.contact-form button{
+    
     height: 38px;
     background: var(--primary-color);
     border: 1px solid var(--secondary-color);
@@ -233,7 +237,7 @@ section{
     font-size: 13pt;
 }
 
-.contact-home button:hover{
+.contact-form button:hover{
     background: var(--secondary-color);
     border-color: var(--complementar-1);
     color: white;
@@ -363,15 +367,88 @@ section{
 }
 
 .dados{
-    height: 50%;
     text-align: center;
+    align-items: center;
 }
 
 .map-row{
-    margin-top: 10%;
+    margin: auto;
 }
 
 .whats-row{
     margin-top: 10%;
-    align-items: center;
+}
+
+.separator{
+    width: 1px;
+    height: 80%;
+    border: 1px solid black;
+    margin: auto;
+}
+
+/*Contact form*/
+textarea{
+    border: 1px solid var(--complementar-2);
+    border-radius: 3px;
+    outline: none;
+    padding: 7px;
+    background: transparent;
+    margin-top: 12px;
+}
+
+.col-form-down{
+    margin: auto;
+    text-align: center;
+}
+
+.label-float {
+    position: relative;
+}
+
+.label-float input{
+    outline: none;
+    transition: all .1s linear;
+    -webkit-transition: all .1s linear;
+    -moz-transition: all .1s linear;
+    -webkit-appearance: none;
+}
+
+.label-float input:focus, textarea:focus {
+    border: 2px solid #3951b2;
+}
+  
+.label-float input::placeholder {
+    color: transparent;
+}
+
+.label-float label {
+    pointer-events: none;
+    position: absolute;
+    top: calc(50% - 11px);
+    left: 13%;
+    transition: all .1s linear;
+    -webkit-transition: all .1s linear;
+    -moz-transition: all .1s linear;
+    background-color: white;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.label-float input:required:invalid+label {
+    color: var(--primary-color);
+}
+
+.label-float input:focus:required:invalid {
+    border: 2px solid var(--primary-color);
+}
+
+.label-float input:required:invalid+label:before {
+    content: '*';
+}
+
+.label-float input:focus+label,
+.label-float input:not(:placeholder-shown)+label {
+    font-size: 13px;
+    top: 0;
+    color: #3951b2;
 }
