@@ -237,14 +237,17 @@
         </section>
 
         <section class="section section-contact-footer containter-fluid">
-            
+            <div class="row">
+                <div class="col-12">
+                    <h1 style="color: white; text-align: center; padding-top: 25px; margin-bottom: 0;">Tem alguma dúvida ou precisa de apoio jurídico?</h1>
+                </div>
+            </div>
            
-            <div class="row align-items-center" style="height: 100%;">
+            <div class="row align-items-center" style="height: 80%;">
                 <div class="col-12 contact-board">
                     <div class="row" >
                         <div class="col-12 title-board" style="text-align: center; margin-top: 8px; height: fit-content;">
-                            <h4>Tem alguma dúvida ou precisa de apoio jurídico?</h4>
-                            <h6>Entre em contato ou venha até nosso escritório</h6>
+                            <h4>Entre em contato ou venha até o nosso escritório</h4>
                         </div>
                     </div>
                     <div class="row align-items-center" style="height: 83%;">
@@ -255,22 +258,36 @@
                                     <img src="sources/map-marker.png" height="60px" alt="">
                                 </div>    
                                 
-                                <div class="col-6">
+                                <div class="col-6" style="font-size: 14pt;">
                                     Av. Presidente Getúlio Vargas, 2394
                                     
                                     Centro - Alvorada/RS
                                 </div>
                             </div>
                             
-                            <a href="">Como chegar</a>
+                            <a href="" class="como-chegar">Como chegar</a>
 
                             <div class="row whats-row">
-                                <div class="col-3">
+                                <div class="col-3" style="padding-right: 0;">
                                     <img src="sources/whats-icon.png" height="45px" alt="">
                                 </div>    
                                 
-                                <div class="col-6">
+                                <div class="col-6" style="font-size: 15pt;">
                                     (51)99986-5349
+                                </div>
+                            </div>
+
+                            <div class="row social-row">
+                                <div class="col-12">
+                                    <a href="">
+                                        <img src="sources/face-icon.png" height="25px" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img src="sources/insta-icon.png" height="25px" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img src="sources/youtube-icon.png" height="25px" alt="">
+                                    </a>
                                 </div>
                             </div>
                             
@@ -284,15 +301,18 @@
                                         
                                         <div class="label-float">
                                             <input type="text" name="nome" placeholder=" " class="col-9 col-md-9 input-nome input-down" required>
-                                            <label>Nome</label>
+                                            <label class="input-label">Nome</label>
                                         </div>
                                         <div class="label-float">
                                             <input type="tel" name="telefone" autocomplete="tel-national" placeholder=" " class="col-9 col-md-9 input-tel input-down" required>
-                                            <label>Telefone</label>
+                                            <label class="input-label">Telefone</label>
                                         </div>
-        
-                                        <textarea name="mensagem" rows="5" placeholder="Mensagem" class="input input-msg col-9 col-md-9"></textarea>
-
+                                        
+                                        <div class="label-float">
+                                            <textarea name="mensagem" rows="5" placeholder=" " class="input input-msg col-9 col-md-9"></textarea>
+                                            <label class="textarea-label">Mensagem</label>
+                                        </div>
+                                        
                                         <button class="col-9 col-md-9 submit-form input-down" name="enviar" type="submit">Enviar</button>
                                         <p id="response-form-down"></p>
 
@@ -306,6 +326,20 @@
             
         </section>
 
+        <section class="section section-newsletter container-fluid">
+            <div class="row align-items-center" style="height: 100%;text-align: center;">
+                <div class="col-12">
+                   <h5 style="margin-bottom: 0;">Assine nossa NewsLetter e fique por dentro das novidades</h5> 
+                </div>
+                <div class="col-10 col-md-5 input-group" style="margin: 0 auto;">
+                    <input type="text" class="col-10 input input-news" aria-label="E-mail" aria-describedby="but-enviar">
+                    <div class="input-group-append col-2 div-button" style="padding: 0;">
+                        <button class="btn btn-outline-secondary news-send" style="width: 100%;" type="button" id="button-addon2">Enviar</button>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
         
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>

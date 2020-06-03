@@ -363,12 +363,17 @@ section{
 .contact-board{
     height: 67vh;
     width: 100vw;
-    background-color: white;
+    background-image: linear-gradient(45deg, whitesmoke, white);;
 }
 
 .dados{
     text-align: center;
     align-items: center;
+}
+
+.como-chegar:focus, .como-chegar:hover{
+    color: var(--complementar-1);
+    transform: scale(1.05);
 }
 
 .map-row{
@@ -377,6 +382,14 @@ section{
 
 .whats-row{
     margin-top: 10%;
+}
+
+.social-row{
+    margin-top: 15px;
+}
+
+.social-row a{
+    margin-left: 5px;
 }
 
 .separator{
@@ -391,7 +404,7 @@ textarea{
     border: 1px solid var(--complementar-2);
     border-radius: 3px;
     outline: none;
-    padding: 7px;
+    padding: 14px;
     background: transparent;
     margin-top: 12px;
 }
@@ -405,7 +418,7 @@ textarea{
     position: relative;
 }
 
-.label-float input{
+.label-float input, .label-float textarea{
     outline: none;
     transition: all .1s linear;
     -webkit-transition: all .1s linear;
@@ -414,17 +427,16 @@ textarea{
 }
 
 .label-float input:focus, textarea:focus {
-    border: 2px solid #3951b2;
+    border: 2px solid var(--secondary-color);
 }
   
-.label-float input::placeholder {
+.label-float input::placeholder, .label-float textarea::placeholder {
     color: transparent;
 }
 
 .label-float label {
     pointer-events: none;
     position: absolute;
-    top: calc(50% - 11px);
     left: 13%;
     transition: all .1s linear;
     -webkit-transition: all .1s linear;
@@ -432,6 +444,14 @@ textarea{
     background-color: white;
     padding: 5px;
     box-sizing: border-box;
+}
+
+.label-float .textarea-label{
+    top: 13px;
+}
+
+.label-float .input-label{
+    top: calc(50% - 11px);
 }
 
 .label-float input:required:invalid+label {
@@ -447,8 +467,45 @@ textarea{
 }
 
 .label-float input:focus+label,
-.label-float input:not(:placeholder-shown)+label {
+.label-float input:not(:placeholder-shown)+label,
+.label-float textarea:focus+label,
+.label-float textarea:not(:placeholder-shown)+label {
     font-size: 13px;
     top: 0;
     color: #3951b2;
+}
+
+/*Section NewsLetter*/
+.section-newsletter{
+    height: 120px;
+    text-align: center;
+}
+
+.input-news{
+    color: var(--primary-color);
+    outline: none;
+}
+
+.input-news:focus{
+    border-top: 2px solid var(--secondary-color);
+    border-left: 2px solid var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    border-right: none;
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+}
+
+.input-news:focus+.div-button button{
+    border-top: 2px solid var(--secondary-color);
+    border-right: 2px solid var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    border-left: none;
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+    background: var(--secondary-color);
+    color: white;
+}   
+
+.div-button button:hover{
+    background: var(--secondary-color);
 }
