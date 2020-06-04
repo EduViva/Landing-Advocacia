@@ -221,6 +221,7 @@ section{
     background: transparent;
     margin-top: 12px;
     text-align: center;
+    color: white;
 }
 
 .contact-upper button{
@@ -269,7 +270,7 @@ section{
 
 /*Middle text*/
 #img-bg{
-    background: url('/sources/direito_civil.jpg') no-repeat center;
+    background: url('sources/direito_civil.jpg') no-repeat center;
     background-attachment: fixed;
     height: 25vh;
     width: 100%;
@@ -389,7 +390,7 @@ section{
 }
 
 .social-row a{
-    margin-left: 5px;
+    margin: 2%;
 }
 
 .separator{
@@ -479,11 +480,19 @@ textarea{
 .section-newsletter{
     height: 120px;
     text-align: center;
+    margin-top: 3%;
 }
 
 .input-news{
     color: var(--primary-color);
     outline: none;
+}
+
+.label-news{
+    display: none;
+    transition: 2s linear;
+    margin-left: 5px;
+    font-size: 10pt;
 }
 
 .input-news:focus{
@@ -504,8 +513,33 @@ textarea{
     border-bottom-right-radius: .25rem;
     background: var(--secondary-color);
     color: white;
-}   
+}
+
+.input-news:focus+.div-button button:hover{
+    background: var(--complementar-2);
+}
 
 .div-button button:hover{
     background: var(--secondary-color);
+}
+
+/*footer*/
+footer{
+    background: black;
+    height: 7vh;
+    margin-top: 3%;
+    text-align: center;
+}
+
+.copy-footer{
+    color: white;
+    margin: auto;
+}
+
+.social-footer a{
+    margin: 5%
+}
+
+.social-footer img{
+    filter: invert(100%);
 }

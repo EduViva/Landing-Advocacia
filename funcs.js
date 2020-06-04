@@ -9,7 +9,17 @@ $(function(){
         document.getElementsByClassName('social')[0].remove();
 
 	}
-	
+
+	let input_news = document.getElementById('input-news');
+
+	input_news.addEventListener("input", () => {
+		if(input_news.value != ""){
+			$('.label-news').css('display','block');
+		} else {
+			$('.label-news').css('display','none');
+		}
+	});
+
 	$('.multiple-items').slick({
 		dots: true,
 		infinite: true,
