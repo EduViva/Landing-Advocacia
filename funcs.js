@@ -3,6 +3,8 @@ var position = $(window).scrollTop();
 
 $(function(){
 	lazyload();
+
+	$('.input-tel').mask('(00) 0000-00000');
 	
     if(window.matchMedia('(max-width: 768px)').matches){
 
@@ -51,6 +53,7 @@ $(document).on("scroll",function(){
 
 	var scroll = $(window).scrollTop();
 
+	//Topbar
 	if(window.matchMedia('(max-width: 768px)').matches){
 		if(scroll > 300){
             $('.navbar-collapse').css("display","none");
@@ -107,5 +110,51 @@ $(document).on("scroll",function(){
 	}
 
 	position = scroll;
+	//End Topbar
 
+	//scrollbar
+	let pageSize = $(document).height();
+	var attPos = $(window).height() + scroll;
+	if(attPos == pageSize || scroll == 0){
+		$('body::-webkit-scrollbar-thumb').css('border-radius' , '0px');
+	}
 });
+
+//Formulário de contato
+function contactSubmited(e){
+	e.preventDefault();
+	console.log(e);
+	var targetForm = e.target.id;
+	$(".submit-form").html("Enviando...");
+	$(".submit-form").attr("disabled", true);
+  
+	let data = {
+	  name: $('.input-nome').val(),
+	  telefone: $('.input-tel').val(),
+	  message: $('.input-msg').val(),
+	  url: window.location.href
+	};
+  
+	sendMessage(data);
+  }
+  
+  
+  function sendMessage(message){
+	$.ajax({
+	  url: `contact.php`,
+	  type: "POST",
+	  data: {'message': message},
+	  cache: false,
+	  async: true,
+	  success: function(response) {
+		$(".submit-form").html("Enviar");
+		$(".submit-form").attr("disabled", false);
+		
+		if (response) {
+		  $(`#response-${targetForm}`).html("Mensagem enviada com sucesso!");
+		} else {
+		  $(`#response-${targetForm}`).html("Erro no envio da mensagem, tente novamente!");
+		}
+	  }
+	})
+  }

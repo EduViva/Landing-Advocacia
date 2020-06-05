@@ -28,6 +28,7 @@
         <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
         <script src="funcs.js"></script>
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css">
@@ -56,7 +57,7 @@
             <div class="social nav-items navbar-collapse">
                 <a class="nav-item nav-link social-item" id="facebook" href="#"><img src="sources/face-icon.png" width="25" height="25"  alt="Facebook"></a>
                 <a class="nav-item nav-link social-item" id="instagram" href="#"><img src="sources/insta-icon.png" width="25" height="25" alt="Instagram"></a>
-                <a class="nav-item nav-link social-item" id="youtube" href="#"><img src="sources/youtube-icon.png" width="25" height="25" alt="Youtube"></a>
+                <a class="nav-item nav-link social-item" id="telegram" href="#"><img src="sources/telegram-icon-black.png" width="23" height="23" alt="Telegram"></a>
             </div>
         </nav>
 
@@ -85,7 +86,7 @@
                                     <h1>Direito Civil</h1>
                                 </div>
                                 <div class="carousel-item align-items-center justify-content-center" id="img-1">
-                                    <h1>Criminal</h1>
+                                    <h1>Imobiliário</h1>
                                 </div>
                                 <div class="carousel-item align-items-center justify-content-center" id="img-1">
                                     <h1>Trabalhista</h1>
@@ -112,6 +113,15 @@
                     <div class="col-11 col-md-3 contact-home contact-upper">
                         
                         <h3 style="color: var(--last-color);">Precisando de ajuda?</h3>
+                        <div class="col-12 contacts">
+                            <a class="social-link" href="">
+                                <img src="sources/whats-colored-icon.svg" height="30px" alt="">    
+                            </a>
+                            <a class="social-link" href="">
+                                <img src="sources/telegram-icon.svg" height="30px" alt="">
+                            </a>
+                        </div>
+                        
 
                         <form class="contact-form" id="contact-upper" onsubmit="contactSubmited(event)" netlify>
 
@@ -119,7 +129,7 @@
                             <input type="tel" name="telefone" placeholder="Telefone" class="col-9 col-md-9 input-tel input-upper" required>    
                             
                             <button class="col-9 col-md-9 submit-form input-upper" name="enviar" type="submit">Enviar</button>
-                            <p id="response-form-upper"></p>
+                            <p id="response-contact-upper"></p>
 
                         </form>
         
@@ -134,7 +144,7 @@
                 <div class="col-12" style="margin-bottom: 15vh;">
                     <div id="img-bg"></div>
                     <h2 id="middle-text" style="z-index: 200;">
-                        Há 46 anos entregando o melhor do ramo advocatício
+                        Há 44 anos entregando o melhor do ramo advocatício
                     </h2>
                 </div>
             </div>
@@ -271,7 +281,10 @@
 
                             <div class="row whats-row">
                                 <div class="col-3" style="padding-right: 0;">
-                                    <img src="sources/whats-icon.png" height="45px" alt="">
+                                    <a href="">
+                                        <img src="sources/whats-icon.png" height="45px" alt="Whatsapp">
+                                    </a>
+                                    
                                 </div>    
                                 
                                 <div class="col-6" style="font-size: 15pt;">
@@ -281,14 +294,14 @@
 
                             <div class="row social-row">
                                 <div class="col-12">
-                                    <a href="">
-                                        <img src="sources/face-icon.png" height="25px" alt="">
+                                    <a class="social-link" href="">
+                                        <img src="sources/face-icon.png" height="25px" alt="Facebook">
                                     </a>
-                                    <a href="">
-                                        <img src="sources/insta-icon.png" height="25px" alt="">
+                                    <a class="social-link" href="">
+                                        <img src="sources/insta-icon.png" height="25px" alt="Instagram">
                                     </a>
-                                    <a href="">
-                                        <img src="sources/youtube-icon.png" height="25px" alt="">
+                                    <a class="social-link" href="">
+                                        <img src="sources/telegram-icon-black.png" height="23px" alt="Telegram">
                                     </a>
                                 </div>
                             </div>
@@ -311,12 +324,12 @@
                                         </div>
                                         
                                         <div class="label-float">
-                                            <textarea name="mensagem" rows="5" placeholder=" " class="input input-msg col-9 col-md-9"></textarea>
+                                            <textarea name="mensagem" rows="5" placeholder=" " class="input input-msg col-9 col-md-9 input-down"></textarea>
                                             <label class="textarea-label">Mensagem</label>
                                         </div>
                                         
                                         <button class="col-9 col-md-9 submit-form input-down" name="enviar" type="submit">Enviar</button>
-                                        <p id="response-form-down"></p>
+                                        <p id="response-contact-down"></p>
 
                                     </form>
                                 </div>
@@ -357,19 +370,19 @@
                         </span></p>
                     </div>
                     <div class="col-3 copy-footer">
-                        <p style="margin-bottom: 0;">Fantin & Imhoff Advogados c 2020</p>
+                        <p style="margin-bottom: 0;">Fantin & Imhoff Advogados © 2020</p>
                     </div>
                     <div class="col-3 social-footer">
                         <div class="row social-row" style="margin-top: 0;">
                             <div class="col-12">
-                                <a href="">
-                                    <img src="sources/face-icon.png" height="25px" alt="">
+                                <a class="social-link" href="">
+                                    <img src="sources/face-icon.png" height="25px" alt="Facebook">
                                 </a>
-                                <a href="">
-                                    <img src="sources/insta-icon.png" height="25px" alt="">
+                                <a class="social-link" href="">
+                                    <img src="sources/insta-icon.png" height="25px" alt="Instagram">
                                 </a>
-                                <a href="">
-                                    <img src="sources/youtube-icon.png" height="25px" alt="">
+                                <a class="social-link" href="">
+                                    <img src="sources/telegram-icon-black.png" height="23px" alt="Telegram">
                                 </a>
                             </div>
                         </div>

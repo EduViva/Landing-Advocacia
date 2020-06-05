@@ -7,6 +7,7 @@
     }
     .social-item{
         margin-left: 2px;
+        filter: brightness(0);
     }
     .social{
         margin-left: 12%;
@@ -29,8 +30,8 @@
         background-repeat: no-repeat;
     }
    
-    #contact-upper{
-        margin-top: 10%;
+    #contact-upper, .contacts{
+        padding-top: 2%;
     }
 
     #middle-text{
@@ -141,6 +142,10 @@ body{
     overflow-x: hidden;
 }
 
+a:hover{
+    text-decoration: none;
+}
+
 /*Setando scrollbar*/
 body::-webkit-scrollbar-track {
     background-color: #F4F4F4;
@@ -213,6 +218,10 @@ section{
     background: var(--secondary-color);
 }
 
+.contact-upper input{
+    color: white;
+}
+
 .contact-form input{
     border: 1px solid var(--complementar-2);
     border-radius: 3px;
@@ -221,7 +230,6 @@ section{
     background: transparent;
     margin-top: 12px;
     text-align: center;
-    color: white;
 }
 
 .contact-upper button{
@@ -387,6 +395,10 @@ section{
 
 .social-row{
     margin-top: 15px;
+}
+
+.dados .social-row a{
+    filter: brightness(0);
 }
 
 .social-row a{
