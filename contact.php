@@ -6,11 +6,12 @@ $arr = $_POST['message'];
 
 
 
-$nome = $arr['name'];
-$telefone = $arr['telefone'];
-$msg = $arr['message'];
+$nome = !(empty($arr['name'])) ? $arr['name'] : "";
+$telefone = !(empty($arr['telefone'])) ? $arr['telefone'] : "";
+$msg = !(empty($arr['message'])) ? $arr['message'] : "";
+$mail = !(empty($arr['mail'])) ? $arr['mail'] : "";
 
-echo true;
+echo $nome . ", " . $telefone . ", " . $msg . ", " . $mail;
 
 //Se salvar no banco de dados echo true se der erro no Banco de dados echo false;
 

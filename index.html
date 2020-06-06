@@ -35,8 +35,6 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css">
     </head>
     <body>
-        
-        <!--Usar lazy load nas imagens-->
 
         <!--Navbar-->
         <nav class="navbar navbar-expand-lg navbar-light" style="position: fixed;">
@@ -277,7 +275,7 @@
                                 </div>
                             </div>
                             
-                            <a href="" class="como-chegar">Como chegar</a>
+                            <a href="" class="como-chegar" data-toggle="modal" data-target="#modal-chegar">Como chegar</a>
 
                             <div class="row whats-row">
                                 <div class="col-3" style="padding-right: 0;">
@@ -319,7 +317,7 @@
                                             <label class="input-label">Nome</label>
                                         </div>
                                         <div class="label-float">
-                                            <input type="tel" name="telefone" autocomplete="tel-national" placeholder=" " class="col-9 col-md-9 input-tel input-down" required>
+                                            <input type="tel" name="telefone" autocomplete="tel-national" placeholder=" " class="col-9 col-md-9 input-tel nome-down input-down" required>
                                             <label class="input-label">Telefone</label>
                                         </div>
                                         
@@ -346,9 +344,9 @@
                 <div class="col-12">
                    <h5 style="margin-bottom: 0;">Assine nossa NewsLetter e fique por dentro das novidades</h5> 
                 </div>
-                <form action="" class="col-12 news-form" netlify>
+                <form class="col-12 news-form" id="contact-news" onsubmit="contactSubmited(event)" netlify>
                     <div class="col-10 col-md-5 input-group" style="margin: 0 auto;">
-                        <label for="news" class="label-news">Digite seu e-mail para receber novidades</label>
+                        <label for="news" class="label-news" id="response-contact-news">Digite seu e-mail para receber novidades</label>
                         <input type="email" name="news" placeholder="Digite seu e-mail para receber novidades" class="col-10 input input-news" id="input-news" aria-label="E-mail" aria-describedby="but-enviar">
                         
                         <div class="input-group-append col-2 div-button" style="padding: 0;">
@@ -358,6 +356,33 @@
                 </form>
             </div>
         </section>
+
+        <!-- Modal -->
+        <div class="modal fade" id="modal-chegar" tabindex="-1" role="dialog" aria-labelledby="comoChegar" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="comoChegar">Como chegar</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h4 style="text-align: center;">Saiba como chegar ao nosso escritório</h4>
+                        <div class="map-div">
+                            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.3483794268473!2d-51.078795285353074!3d-29.99815153608441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95197540a82133f7%3A0x12a677ecb2d27ab1!2sMarcos%20Fantin%20Pessoa!5e0!3m2!1spt-BR!2sbr!4v1591450456340!5m2!1spt-BR!2sbr" frameborder="0" style="border:0;" allowfullscreen="true" aria-hidden="false" tabindex="0"></iframe>
+                            <div id="box">
+                                <p>Permita o navegador acessar sua localização para saber como chegar aqui!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="modal-close" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        <button type="button" id="modal-success" class="btn btn-primary" data-dismiss="modal">Entendi!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <footer>
             <div class="container-fluid" style="height: 100%;">
