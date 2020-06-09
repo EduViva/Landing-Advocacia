@@ -146,7 +146,7 @@ function contactSubmited(e){
 	e.preventDefault();
 	
 	var targetForm = e.target.id;
-	$(".submit-form").html("Enviando...");
+	$(`.send-${targetForm}`).html("Enviando...");
 	$(".submit-form").attr("disabled", true);
 
 	console.log(targetForm);
@@ -184,9 +184,11 @@ function contactSubmited(e){
 	  cache: false,
 	  async: true,
 	  success: function(response) {
-		$(".submit-form").html("Enviar");
+		$(`.send-${targetForm}`).html("Enviar");
 		$(".submit-form").attr("disabled", false);
+
 		console.log(response);
+		
 		if (response) {
 		  $(`#response-${targetForm}`).html("Dados enviados com sucesso!");
 		  $(`#response-${targetForm}`).css("color","black");
