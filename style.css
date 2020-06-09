@@ -41,7 +41,7 @@
 
     /*section clientes*/
     .slider-clientes{
-        padding-top: 13vh;
+        padding-top: 9.5vh;
     }
     .slick-dots{
         margin-bottom: 0;
@@ -59,6 +59,17 @@
     }
     #box{
         width: 22%;
+    }
+    /*Section contact footer*/
+    .section-contact-footer{
+        margin-top: 8%;
+    }
+    .title-contact-down{
+        padding-top: 2.5%;
+    }
+    .row-title-board{
+        margin-top: .5%; 
+        margin-bottom: -.5%;
     }
 }
 /*rgba(var(--secondary-color), 1);*/
@@ -95,14 +106,21 @@
     #middle-text{
         bottom: 20%;
         left: 0;
-        font-size: 18pt;
+        font-size: 19pt;
+        padding: 0 20px;
     }
     /*section clientes*/
     .slider-clientes{
-        padding-top: 20vh;
+        padding-top: 8.5vh;
     }
     .slick-dots li{
         margin-top: 20px;
+    }
+
+    /*section equipe*/
+    .section-equipe{
+        margin-top: -8%;
+        margin-bottom: 8%;
     }
     .img-equipe img{
         display: none;
@@ -126,6 +144,21 @@
     /*Section duvidas*/
     .bi-chevron-down{
         float: right;
+    }
+    /*Section contact footer*/
+    .section-contact-footer{
+        margin-top: 16%;
+    }
+    .title-contact-down{
+        font-size: 2em;
+        white-space: break-spaces;
+        padding: 25px 10px 0 10px;
+    }
+    .row-title-board{
+        background-color: #F1F1F1;
+    }
+    .title-board{
+        font-size: 1.1em;
     }
 }
 
@@ -310,9 +343,8 @@ section{
 
 .slider-clientes{
     background: linear-gradient(to bottom, rgba(0,168,115,0) 0%, rgba(0,168,115,0) 3.99%, #242424 4%, #242424 74%, rgba(0,168,115,0) 74.01%, rgba(0,168,115,0) 100%);
-    height: 67vh;
+    height: 60vh;
 }
-
 
 /*Slick plugin*/
 .slick-arrow{
@@ -373,15 +405,30 @@ section{
 /*Section contact footer*/
 .section-contact-footer{
     height: 100vh;
+    width: 100%;
     background-color: var(--secondary-color);
     /*background-image: linear-gradient(to bottom, white, var(--secondary-color));*/
-    margin-top: 25px;
+    
+}
+
+.title-contact-down{
+    color: white; 
+    text-align: center; 
+    padding-top: 25px; 
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.title-board{
+    text-align: center;
+    margin-top: 8px;
+    width: 100%;
 }
 
 .contact-board{
     height: 67vh;
-    width: 100vw;
-    background-image: linear-gradient(45deg, whitesmoke, white);;
+    width: 100%;
+    background-color: white;
 }
 
 .dados{
