@@ -246,25 +246,25 @@
             
         </section>
 
-        <section class="section section-contact-footer containter-fluid">
+        <section class="section section-contact-footer container-fluid">
             <div class="row">
                 <h1 class="title-contact-down">Tem alguma dúvida ou precisa de apoio jurídico?</h1>
             </div>
            
             <div class="row align-items-center" style="height: 80%;">
-                <div class="contact-board">
+                <div class="contact-board container-fluid">
                     <div class="row row-title-board">
                         <h4 class="title-board">Entre em contato ou venha até o nosso escritório</h4>
                     </div>
                     <div class="row align-items-center" style="height: 83%;">
-                        <div class="col-md col-sm-12 dados">
-                            
+                        
+                        <div class="col-md col-sm-12 dados order-3 order-sm-1">
                             <div class="row map-row">
-                                <div class="col-3">
+                                <div class="col-12 col-md-3">
                                     <img src="sources/map-marker.png" height="60px" alt="">
                                 </div>    
                                 
-                                <div class="col-6" style="font-size: 14pt;">
+                                <div class="col-md-6 col-10 text-dados endereco" style="font-size: 14pt;">
                                     Av. Presidente Getúlio Vargas, 2394
                                     
                                     Centro - Alvorada/RS
@@ -274,14 +274,14 @@
                             <a href="" class="como-chegar" data-toggle="modal" data-target="#modal-chegar">Como chegar</a>
 
                             <div class="row whats-row">
-                                <div class="col-3" style="padding-right: 0;">
+                                <div class="col-12 col-md-3" style="padding-right: 0;">
                                     <a href="">
                                         <img src="sources/whats-icon.png" height="45px" alt="Whatsapp">
                                     </a>
                                     
                                 </div>    
                                 
-                                <div class="col-6" style="font-size: 15pt;">
+                                <div class="col-md-6 col-10 text-dados number" style="font-size: 15pt;">
                                     (51)99986-5349
                                 </div>
                             </div>
@@ -299,30 +299,30 @@
                                     </a>
                                 </div>
                             </div>
-                            
                         </div>
 
-                        <div class="separator"></div>
-                        <div class="col-md col-sm-12">
+                        <div class="separator order-2 order-sm-2"></div>
+                        
+                        <div class="col-md col-sm-12 form-div-down order-1 order-sm-3">
                             <div class="row">
                                 <div class="col-10 col-form-down">
                                     <form class="contact-form" id="contact-down" onsubmit="contactSubmited(event)" netlify>
                                         
                                         <div class="label-float">
-                                            <input type="text" name="nome" placeholder=" " class="col-9 col-md-9 input-nome input-down" required>
+                                            <input type="text" name="nome" placeholder=" " class="col-md-9 col-sm-12 input-nome input-down" required>
                                             <label class="input-label">Nome</label>
                                         </div>
                                         <div class="label-float">
-                                            <input type="tel" name="telefone" autocomplete="tel-national" placeholder=" " class="col-9 col-md-9 input-tel nome-down input-down" required>
+                                            <input type="tel" name="telefone" autocomplete="tel-national" placeholder=" " class="col-md-9 col-sm-12 input-tel nome-down input-down" required>
                                             <label class="input-label">Telefone</label>
                                         </div>
                                         
                                         <div class="label-float">
-                                            <textarea name="mensagem" rows="5" placeholder=" " class="input input-msg col-9 col-md-9 input-down"></textarea>
+                                            <textarea name="mensagem" rows="5" placeholder=" " class="input input-msg col-md-9 col-sm-12 input-down"></textarea>
                                             <label class="textarea-label">Mensagem</label>
                                         </div>
                                         
-                                        <button class="col-9 col-md-9 submit-form input-down send-contact-down" name="enviar" type="submit">Enviar</button>
+                                        <button class="col-md-9 col-sm-12 submit-form input-down send-contact-down" name="enviar" type="submit">Enviar</button>
                                         <p id="response-contact-down"></p>
 
                                     </form>

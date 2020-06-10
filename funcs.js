@@ -7,13 +7,10 @@ $(function(){
 	$('.input-tel').mask('(00) 0000-00000');
 	
     if(window.matchMedia('(max-width: 768px)').matches){
-
         document.getElementsByClassName('social')[0].remove();
-
 	}
 
 	let input_news = document.getElementById('input-news');
-
 	input_news.addEventListener("input", () => {
 		if(input_news.value != ""){
 			$('.label-news').css('display','block');
@@ -137,14 +134,7 @@ $(document).on("scroll",function(){
 	}
 
 	position = scroll;
-	//End Topbar
 
-	//scrollbar
-	let pageSize = $(document).height();
-	var attPos = $(window).height() + scroll;
-	if(attPos == pageSize || scroll == 0){
-		$('body::-webkit-scrollbar-thumb').css('border-radius' , '0px');
-	}
 });
 
 //Formulário de contato

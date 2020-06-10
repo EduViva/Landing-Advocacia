@@ -63,13 +63,26 @@
     /*Section contact footer*/
     .section-contact-footer{
         margin-top: 8%;
+        height: 100vh;
     }
     .title-contact-down{
         padding-top: 2.5%;
     }
+    .contact-board{
+        height: 67vh;
+    }
     .row-title-board{
         margin-top: .5%; 
         margin-bottom: -.5%;
+    }
+    .separator{
+        width: 1px;
+        height: 89%;
+        border: 1px solid black;
+        margin: auto;
+    }
+    .label-float label {
+        left: 13%;
     }
 }
 /*rgba(var(--secondary-color), 1);*/
@@ -148,17 +161,48 @@
     /*Section contact footer*/
     .section-contact-footer{
         margin-top: 16%;
+        height: fit-content;
     }
     .title-contact-down{
         font-size: 2em;
         white-space: break-spaces;
-        padding: 25px 10px 0 10px;
+        padding: 10px 10px 15px;
+    }
+    .contact-board{
+        height: fit-content;
     }
     .row-title-board{
         background-color: #F1F1F1;
     }
     .title-board{
         font-size: 1.1em;
+    }
+    .text-dados{
+        margin: auto;
+    }
+    .whats-row .number{
+        margin-top: 2%;
+    }
+    .dados .social-row{
+        margin: 10% 0 5%;
+    }
+    .dados .social-row a{
+        margin: 3.8%;
+    }
+    .separator{
+        width: 100%;
+        height: 0;
+        border: 1px solid black;
+        margin: 55px 0;
+    }
+    .form-div-down{
+        margin-top: 26px;
+    }
+    .label-float label {
+        left: 2%;
+    }
+    .send-contact-down{
+        margin-top: 6px;
     }
 }
 
@@ -404,17 +448,14 @@ section{
 
 /*Section contact footer*/
 .section-contact-footer{
-    height: 100vh;
     width: 100%;
     background-color: var(--secondary-color);
-    /*background-image: linear-gradient(to bottom, white, var(--secondary-color));*/
-    
+    /*background-image: linear-gradient(to bottom, white, var(--secondary-color));*/   
 }
 
 .title-contact-down{
     color: white; 
     text-align: center; 
-    padding-top: 25px; 
     margin-bottom: 0;
     width: 100%;
 }
@@ -426,7 +467,6 @@ section{
 }
 
 .contact-board{
-    height: 67vh;
     width: 100%;
     background-color: white;
 }
@@ -459,13 +499,6 @@ section{
 
 .social-row a{
     margin: 2%;
-}
-
-.separator{
-    width: 1px;
-    height: 80%;
-    border: 1px solid black;
-    margin: auto;
 }
 
 /*Contact form*/
@@ -506,7 +539,6 @@ textarea{
 .label-float label {
     pointer-events: none;
     position: absolute;
-    left: 13%;
     transition: all .1s linear;
     -webkit-transition: all .1s linear;
     -moz-transition: all .1s linear;
