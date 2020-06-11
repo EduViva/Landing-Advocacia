@@ -1,4 +1,187 @@
+@media(max-width: 320px){
+    .princ-text{
+        font-size: 12pt !important;
+    }
+    #middle-text{
+        bottom: 10% !important;
+    }
+    .fazem h3{
+        font-size: 1.6rem;
+    }
+    .carousel-item h1{
+        font-size: 28pt !important;
+        top: 45% !important;
+    }
+    .nav-items .links{
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .nav-item{
+        flex-basis: 50%;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+@media(max-width: 375px){
+    .made{
+        margin-top: 10px;
+    }
+    .news-send{
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 11pt;
+    }  
+}
+@media(max-width: 425px){
+    .img-equipe img{
+        display: none;
+    }
+    .text-equipe{
+        background-image: url(sources/equipe-exemplo.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 150%;
+        height: 40vh;
+        width: 95%;
+        margin: auto;
+    }
+    .text-equipe p{
+        margin-top: 7%;
+        font-weight: bold;
+        font-size: 13.5pt;
+    }
+    #text-equipe-1{
+        display: none;
+    }
+    .text-dados{
+        margin: auto;
+    }
+    .label-float label {
+        left: 2% !important;
+    }
+}
+@media(max-width: 768px){
+    nav{
+        top:0;
+    }
+    #navbarNavAltMarkup{
+        margin: -5px -4%;
+    }
+    .nav-item{
+        display: inline-block !important;
+    }
+    .links{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .navbar-brand{
+        text-align: center;
+        width: 100%;
+    }
+    .navbar-brand img{
+        float: left;
+    }
+    .row-contact-home{
+        flex-direction: column-reverse;
+    }
+    .contact-upper{
+        margin-top: 18vh;
+        margin-bottom: 25px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .fazem{
+        padding-bottom: 23px !important;
+    }
+    #middle-text{
+        bottom: 20%;
+        left: 0;
+        font-size: 19pt;
+        padding: 0 20px;
+    }
+    /*section clientes*/
+    .slider-clientes{
+        padding-top: 8.5vh;
+    }
+    .slick-dots li{
+        margin-top: 20px;
+    }
+
+    /*section equipe*/
+    .section-equipe{
+        margin-top: -8%;
+        margin-bottom: 8%;
+    }
+    /*Section duvidas*/
+    .bi-chevron-down{
+        float: right;
+    }
+    /*Section contact footer*/
+    .section-contact-footer{
+        margin-top: 16%;
+        height: fit-content;
+    }
+    .title-contact-down{
+        font-size: 2em;
+        white-space: break-spaces;
+        padding: 10px 10px 15px;
+    }
+    .contact-board{
+        height: fit-content;
+    }
+    .row-title-board{
+        background-color: #F1F1F1;
+    }
+    .title-board{
+        font-size: 1.1em;
+    }
+    .whats-row .number{
+        margin-top: 2%;
+    }
+    .dados .social-row{
+        margin: 10% 0 5%;
+    }
+    .dados .social-row a{
+        margin: 3.8%;
+    }
+    .separator{
+        width: 100%;
+        height: 0;
+        border: 1px solid black;
+        margin: 55px 0;
+    }
+    .form-div-down{
+        margin-top: 26px;
+    }
+    .send-contact-down{
+        margin-top: 6px;
+    }
+    .news-form{
+        padding: 0;
+    }
+    .section-newsletter h5{
+        font-size: .933rem;
+    }
+    footer{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .social-footer{
+        padding-left: 0;
+    }
+    .social-footer a{
+        margin: 3%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    footer div div{
+        margin-top: 5px;
+    }
+}
 @media(min-width: 769px){
+    nav{
+        height: 68px;
+    }
     .nav-items{
         margin-left: 65px;
     }
@@ -52,6 +235,9 @@
         margin-left: -30px;
         margin-right: 20px;
     }
+    .text-equipe p{
+        font-size: 13.5pt;
+    }
     /*Section duvidas*/
     .bi-chevron-down{
         float: left;
@@ -81,68 +267,19 @@
         border: 1px solid black;
         margin: auto;
     }
-    .label-float label {
-        left: 13%;
+    footer{
+        height: 7vh;
     }
 }
-/*rgba(var(--secondary-color), 1);*/
-@media(max-width: 768px){
-    nav{
-        top:0;
-    }
-    #navbarNavAltMarkup{
-        margin: -5px -4%;
-    }
-    .nav-item{
-        display: inline-block !important;
-    }
-    .links{
-        display: flex;
-        justify-content: space-evenly;
-    }
-    .navbar-brand{
-        text-align: center;
-        width: 100%;
-    }
-    .navbar-brand img{
-        float: left;
-    }
-    .row-contact-home{
-        flex-direction: column-reverse;
-    }
-    .contact-upper{
-        margin-top: 18vh;
-        margin-bottom: 25px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+@media(min-width: 768px) and (max-width: 991.98px){
     #middle-text{
-        bottom: 20%;
-        left: 0;
-        font-size: 19pt;
-        padding: 0 20px;
+        bottom: 25%;
+        left: 7.5%;
     }
-    /*section clientes*/
-    .slider-clientes{
-        padding-top: 8.5vh;
-    }
-    .slick-dots li{
-        margin-top: 20px;
-    }
-
-    /*section equipe*/
-    .section-equipe{
-        margin-top: -8%;
-        margin-bottom: 8%;
-    }
-    .img-equipe img{
-        display: none;
+    .contact-upper button {
+        margin-top: 6% !important;
     }
     .text-equipe{
-        background-image: url(sources/equipe-exemplo.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 150%;
         height: 40vh;
         width: 95%;
         margin: auto;
@@ -150,59 +287,40 @@
     .text-equipe p{
         margin-top: 7%;
         font-weight: bold;
+        font-size: 13.5pt;
     }
     #text-equipe-1{
         display: none;
     }
-    /*Section duvidas*/
-    .bi-chevron-down{
-        float: right;
+    .duvidas-down{
+        margin-top: 0 !important;
     }
-    /*Section contact footer*/
-    .section-contact-footer{
-        margin-top: 16%;
-        height: fit-content;
+    .section-contact-footer {
+        margin-top: 8%;
     }
-    .title-contact-down{
-        font-size: 2em;
-        white-space: break-spaces;
-        padding: 10px 10px 15px;
+    .social-row div{
+        margin-top: 0;
     }
-    .contact-board{
-        height: fit-content;
+}
+@media(min-width: 991.99px) and (max-width: 1024px){
+    #middle-text{
+        bottom: 23%;
+        left: 11%;
     }
-    .row-title-board{
-        background-color: #F1F1F1;
+    .slick-dots{
+        margin-top: 0 !important;
     }
-    .title-board{
-        font-size: 1.1em;
+    .nav-items{
+        margin-left: 30px !important;
     }
-    .text-dados{
-        margin: auto;
+    .contact-upper h3{
+        font-size: 1.5rem ;
     }
-    .whats-row .number{
-        margin-top: 2%;
+    .contact-upper .contacts{
+        padding:7% ;
     }
-    .dados .social-row{
-        margin: 10% 0 5%;
-    }
-    .dados .social-row a{
-        margin: 3.8%;
-    }
-    .separator{
-        width: 100%;
-        height: 0;
-        border: 1px solid black;
-        margin: 55px 0;
-    }
-    .form-div-down{
-        margin-top: 26px;
-    }
-    .label-float label {
-        left: 2%;
-    }
-    .send-contact-down{
-        margin-top: 6px;
+    .copy-footer{
+        padding: 0;
     }
 }
 
@@ -217,12 +335,10 @@
     --complementar-2: #6D7275;
     --last-color: #FFFBDB;
 }
-
 body{
     background-color: whitesmoke;
     overflow-x: hidden;
 }
-
 a:hover{
     text-decoration: none;
 }
@@ -239,7 +355,6 @@ body::-webkit-scrollbar-thumb {
     background: rgb(33, 33, 34);
     border-radius: 3px;
 }
-
 nav a h2{
     display: inline-block;
     line-height: 47px;
@@ -255,21 +370,17 @@ nav{
     font-size: 13.5pt;
     z-index: 99;
 }
-
 .nav-item{
     color: var(--last-color);
     transition: .2s;
 }
-
 .nav-item:hover{
     color: rgba(0, 0, 0,.8);
     transform: scale(1.05);
 }
-
 .nav-active{
     color: rgba(0,0,0,.9);
 }
-
 .scrolled{
     color: black;
     font-weight: bold;
@@ -284,25 +395,21 @@ section{
 #container-contact-home{
     text-align: center;
 }
-
 .fazem{
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     padding: 8px;
     height: 309px;
 }
-
 .contact-upper{
     padding: 8px;
     border: 1px solid black;
     height: 309px;
     background: var(--secondary-color);
 }
-
 .contact-upper input{
     color: white;
 }
-
 .contact-form input{
     border: 1px solid var(--complementar-2);
     border-radius: 3px;
@@ -312,11 +419,9 @@ section{
     margin-top: 12px;
     text-align: center;
 }
-
 .contact-upper button{
     margin-top: 12%;
 }
-
 .contact-form button{
     height: 38px;
     background: var(--primary-color);
@@ -325,28 +430,24 @@ section{
     transition: .3s linear;
     font-size: 13pt;
 }
-
 .contact-form button:hover{
     background: var(--secondary-color);
     border-color: var(--complementar-1);
     color: white;
     border-radius: 3px;
 }
-
 #response-contact-upper{
     margin-bottom: 0;
     filter: invert(1);
     font-size: 11pt;
     margin-top: 4px;
 }
-
 .carousel-item{
     width: 100%;
     height: 220px;
     color: var(--last-color);
     position: relative;
 }
-
 .carousel-item h1{
     position: absolute;
     top: 50%;
@@ -354,7 +455,6 @@ section{
     transform: translateY(-50%) translateX(-50%);
     font-size: 38pt;
 }
-
 #img-1{
     background-image: url("sources/blurred-direito\ civil.png");  
     background-position: center;
@@ -371,10 +471,9 @@ section{
     margin-top: 15vh;
     position: relative;
 }
-
 #middle-text{
     text-align: center;
-    z-index: 200;
+    z-index: 98;
     position: absolute;
     margin: auto;
     color: var(--last-color);
@@ -384,7 +483,6 @@ section{
 .section-clientes{
     text-align: center;
 }
-
 .slider-clientes{
     background: linear-gradient(to bottom, rgba(0,168,115,0) 0%, rgba(0,168,115,0) 3.99%, #242424 4%, #242424 74%, rgba(0,168,115,0) 74.01%, rgba(0,168,115,0) 100%);
     height: 60vh;
@@ -394,7 +492,6 @@ section{
 .slick-arrow{
     display: none !important;
 }
-
 .slick-dots li{
     position: relative;
     display: inline-block;
@@ -403,7 +500,6 @@ section{
     margin: 0 9px;
     padding: 0;
 }
-
 .slick-dots li button{
     font-size: 0;
     line-height: 0;
@@ -417,7 +513,6 @@ section{
     outline: none;
     background: rgba(0, 0, 0,.3);
 }
-
 .slick-active button{
     background: black !important;
 }
@@ -426,6 +521,9 @@ section{
 .img-equipe img{
     width: 100%;
     height: 100%;
+}
+.text-equipe p{
+    text-align: center;
 }
 
 /*Section duvidas*/
@@ -436,12 +534,10 @@ section{
     font-size: 13pt;
     border: 1px groove
 }
-
 .duvida-item{
     padding: 10px 15px;
     text-align: justify;
 }
-
 .duvida-item:nth-child(even){
     background: #EEE;
 }
@@ -452,51 +548,41 @@ section{
     background-color: var(--secondary-color);
     /*background-image: linear-gradient(to bottom, white, var(--secondary-color));*/   
 }
-
 .title-contact-down{
     color: white; 
     text-align: center; 
     margin-bottom: 0;
     width: 100%;
 }
-
 .title-board{
     text-align: center;
     margin-top: 8px;
     width: 100%;
 }
-
 .contact-board{
     width: 100%;
     background-color: white;
 }
-
 .dados{
     text-align: center;
     align-items: center;
 }
-
 .como-chegar:focus, .como-chegar:hover{
     color: var(--complementar-1);
     transform: scale(1.05);
 }
-
 .map-row{
     margin: auto;
 }
-
 .whats-row{
     margin-top: 10%;
 }
-
 .social-row{
     margin-top: 15px;
 }
-
 .dados .social-row a{
     filter: brightness(0);
 }
-
 .social-row a{
     margin: 2%;
 }
@@ -510,16 +596,13 @@ textarea{
     background: transparent;
     margin-top: 12px;
 }
-
 .col-form-down{
     margin: auto;
     text-align: center;
 }
-
 .label-float {
     position: relative;
 }
-
 .label-float input, .label-float textarea{
     outline: none;
     transition: all .1s linear;
@@ -527,15 +610,12 @@ textarea{
     -moz-transition: all .1s linear;
     -webkit-appearance: none;
 }
-
 .label-float input:focus, textarea:focus {
     border: 2px solid var(--secondary-color);
 }
-  
 .label-float input::placeholder, .label-float textarea::placeholder {
     color: transparent;
 }
-
 .label-float label {
     pointer-events: none;
     position: absolute;
@@ -545,28 +625,23 @@ textarea{
     background-color: white;
     padding: 5px;
     box-sizing: border-box;
+    left: 13%;
 }
-
 .label-float .textarea-label{
     top: 13px;
 }
-
 .label-float .input-label{
     top: calc(50% - 11px);
 }
-
 .label-float input:required:invalid+label {
     color: var(--primary-color);
 }
-
 .label-float input:focus:required:invalid {
     border: 2px solid var(--primary-color);
 }
-
 .label-float input:required:invalid+label:before {
     content: '*';
 }
-
 .label-float input:focus+label,
 .label-float input:not(:placeholder-shown)+label,
 .label-float textarea:focus+label,
@@ -575,7 +650,6 @@ textarea{
     top: 0;
     color: #3951b2;
 }
-
 #response-contact-down{
     margin-bottom: 0;
 }
@@ -586,19 +660,18 @@ textarea{
     text-align: center;
     margin-top: 3%;
 }
-
 .input-news{
     color: var(--primary-color);
     outline: none;
 }
-
 .label-news{
     display: none;
     transition: 2s linear;
     margin-left: 5px;
     font-size: 10pt;
+    position: absolute;
+    bottom: 35px;
 }
-
 .input-news:focus{
     border-top: 2px solid var(--secondary-color);
     border-left: 2px solid var(--secondary-color);
@@ -607,7 +680,6 @@ textarea{
     border-top-left-radius: .25rem;
     border-bottom-left-radius: .25rem;
 }
-
 .input-news:focus+.div-button button{
     border-top: 2px solid var(--secondary-color);
     border-right: 2px solid var(--secondary-color);
@@ -618,11 +690,9 @@ textarea{
     background: var(--secondary-color);
     color: white;
 }
-
 .input-news:focus+.div-button button:hover{
     background: var(--complementar-2);
 }
-
 .div-button button:hover{
     background: var(--secondary-color);
 }
@@ -630,20 +700,16 @@ textarea{
 /*footer*/
 footer{
     background: black;
-    height: 7vh;
     margin-top: 3%;
     text-align: center;
 }
-
 .copy-footer{
     color: white;
     margin: auto;
 }
-
 .social-footer a{
     margin: 5%
 }
-
 .social-footer img{
     filter: invert(100%);
 }
