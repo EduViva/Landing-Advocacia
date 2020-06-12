@@ -112,6 +112,10 @@
         margin-top: -8%;
         margin-bottom: 8%;
     }
+    .text-equipe p{
+        margin-top: 4%;
+        font-size: 12pt;
+    }
     /*Section duvidas*/
     .bi-chevron-down{
         float: right;
