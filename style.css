@@ -1,7 +1,4 @@
 @media(max-width: 320px){
-    .princ-text{
-        font-size: 12pt !important;
-    }
     #middle-text{
         bottom: 10% !important;
     }
@@ -23,8 +20,8 @@
     }
 }
 @media(max-width: 375px){
-    .made{
-        margin-top: 10px;
+    .princ-text{
+        font-size: 12pt !important;
     }
     .news-send{
         padding-left: 0;
@@ -46,7 +43,7 @@
         margin: auto;
     }
     .text-equipe p{
-        margin-top: 7%;
+        margin-top: 8.6%;
         font-weight: bold;
         font-size: 13.5pt;
     }
@@ -168,14 +165,15 @@
     }
     .social-footer{
         padding-left: 0;
+        margin-top: 7px;
     }
     .social-footer a{
         margin: 3%;
         padding-left: 0;
         padding-right: 0;
     }
-    footer div div{
-        margin-top: 5px;
+    .made{
+        margin-top: 18px;
     }
 }
 @media(min-width: 769px){
@@ -702,6 +700,9 @@ footer{
     background: black;
     margin-top: 3%;
     text-align: center;
+}
+.made{
+    color: #31373d;
 }
 .copy-footer{
     color: white;
