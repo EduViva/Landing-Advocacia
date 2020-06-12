@@ -10,14 +10,6 @@ $(function(){
         document.getElementsByClassName('social')[0].remove();
 	}
 
-	if(window.matchMedia('(min-width: 425px)') && window.matchMedia('(max-width: 767px)')){
-		$('.princ-text').css({
-			'margin-top' : '5.4%',
-			'font-weight' : 'bold',
-			'font-size' : '13.5pt',
-		});
-	}
-
 	let input_news = document.getElementById('input-news');
 	input_news.addEventListener("input", () => {
 		if(input_news.value != ""){

@@ -1,4 +1,7 @@
 @media(max-width: 320px){
+    .text-equipe p{
+        font-size: 12pt !important;
+    }
     #middle-text{
         bottom: 10% !important;
     }
@@ -23,7 +26,7 @@
     .text-equipe p{
         margin-top: 4% !important;
         font-weight: bold;
-        font-size: 14pt !important;
+        font-size: 13pt;
     }
     .news-send{
         padding-left: 0;
@@ -46,6 +49,11 @@
     }
     #text-equipe-1{
         display: none;
+    }
+    .princ-text{
+        margin-top: 5.4%;
+		font-weight: bold;
+		font-size: 13.5pt;
     }
     .text-dados{
         margin: auto;
@@ -105,10 +113,6 @@
     .section-equipe{
         margin-top: -8%;
         margin-bottom: 8%;
-    }
-    .text-equipe p{
-        margin-top: 4%;
-        font-size: 12pt;
     }
     /*Section duvidas*/
     .bi-chevron-down{
