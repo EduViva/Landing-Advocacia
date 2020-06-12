@@ -1,4 +1,7 @@
 @media(max-width: 320px){
+    .text-equipe p{
+        margin-top: 4% !important;
+    }
     #middle-text{
         bottom: 10% !important;
     }
@@ -21,7 +24,7 @@
 }
 @media(max-width: 375px){
     .princ-text{
-        font-size: 12pt !important;
+        font-size: 12.5pt !important;
     }
     .news-send{
         padding-left: 0;
@@ -331,7 +334,7 @@
     --secondary-color: #262626;
     --complementar-1: #931F1D;
     --complementar-2: #6D7275;
-    --last-color: #FFFBDB;
+    --last-color: whitesmoke;
 }
 body{
     background-color: whitesmoke;

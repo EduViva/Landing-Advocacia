@@ -127,7 +127,7 @@ $(document).on("scroll",function(){
 		$('.navbar-collapse').css("display","block");
 	}
 
-	if (scroll >= 736){
+	if (scroll >= 750){
 		$('#middle-text').css('color','var(--secondary-color)');
 	} else {
 		$('#middle-text').css('color','var(--last-color)');
