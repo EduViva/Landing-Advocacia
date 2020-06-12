@@ -20,12 +20,10 @@
     }
 }
 @media(max-width: 375px){
-    .princ-text{
-        font-size: 12.5pt !important;
-    }
     .text-equipe p{
         margin-top: 4% !important;
         font-weight: bold;
+        font-size: 14pt !important;
     }
     .news-send{
         padding-left: 0;
