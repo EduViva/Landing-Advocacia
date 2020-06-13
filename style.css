@@ -101,6 +101,13 @@
     .fazem{
         padding-bottom: 23px !important;
     }
+
+    .col-img-bg{
+        margin-bottom: 8vh !important;
+    }
+    #img-bg{
+        margin-top: 8vh !important;
+    }
     #middle-text{
         bottom: 20%;
         left: 0;
@@ -466,6 +473,9 @@ section{
 }
 
 /*Middle text*/
+.col-img-bg{
+    margin-bottom: 15vh;
+}
 #img-bg{
     background: url('sources/direito_civil.jpg') no-repeat center;
     background-attachment: fixed;
@@ -607,7 +617,7 @@ textarea{
     left: 13%;
 }
 .label-float .textarea-label{
-    top: 13px;
+    top: 14px;
 }
 .label-float .input-label{
     top: calc(50% - 11px);
