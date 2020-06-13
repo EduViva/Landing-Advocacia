@@ -36,7 +36,7 @@
 }
 @media(max-width: 425px){
     #img-bg{
-        height: 20vh;
+        height: 18vh !important;
     }
     #middle-text{
         margin-bottom: 8px !important;
