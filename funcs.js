@@ -20,27 +20,27 @@ $(function(){
 	});
 
 	$('.multiple-items').slick({
-		dots: true,
+		dots: false,
 		infinite: true,
 		slidesToShow: 5,
 		slidesToScroll: 2,
 		autoplay: true,
-  		autoplaySpeed: 3200,
+  		autoplaySpeed: 2500,
 		responsive: [
 			{
 			  breakpoint: 1024,
 			  settings: {
-				slidesToShow: 4,
-				slidesToScroll: 3,
-				infinite: true,
-				dots: true
+					slidesToShow: 4,
+					slidesToScroll: 3,
+					infinite: true,
+					dots: false
 			  }
 			},
 			{
 				breakpoint: 600,
 				settings: {
-				  slidesToShow: 2.5,
-				  slidesToScroll: 2.5
+					slidesToShow: 2.5,
+					slidesToScroll: 2.5
 				}
 			}
 		]
@@ -161,39 +161,38 @@ function contactSubmited(e){
 	}
   
 	let data = {
-	  name: nome,
-	  telefone: tel,
-	  mail: mail,
-	  message: msg,
-	  url: window.location.href
+		name: nome,
+		telefone: tel,
+		mail: mail,
+		message: msg,
+		url: window.location.href
 	};
 
 	sendMessage(data,targetForm);
-  }
+}
   
-  
-  function sendMessage(message,targetForm){
+function sendMessage(message,targetForm){
 	$.ajax({
-	  url: `contact.php`,
-	  type: "POST",
-	  data: {'message': message},
-	  cache: false,
-	  async: true,
-	  success: function(response) {
-		$(`.send-${targetForm}`).html("Enviar");
-		$(".submit-form").attr("disabled", false);
+		url: `contact.php`,
+		type: "POST",
+		data: {'message': message},
+		cache: false,
+		async: true,
+	  	success: function(response) {
+			$(`.send-${targetForm}`).html("Enviar");
+			$(".submit-form").attr("disabled", false);
 
-		console.log(response);
-		
-		if (response) {
-		  $(`#response-${targetForm}`).html("Dados enviados com sucesso!");
-		  $(`#response-${targetForm}`).css("color","black");
-		  $('input').val("");
-		  $('textarea').val("");
-		} else {
-		  $(`#response-${targetForm}`).html("Erro no envio, por favor tente novamente!");
-		  $(`#response-${targetForm}`).css("color","var(--primary-color)");
-		}
-	  }
-	})
-  }
+			console.log(response);
+			
+			if (response) {
+				$(`#response-${targetForm}`).html("Dados enviados com sucesso!");
+				$(`#response-${targetForm}`).css("color","black");
+				$('input').val("");
+				$('textarea').val("");
+			} else {
+				$(`#response-${targetForm}`).html("Erro no envio, por favor tente novamente!");
+				$(`#response-${targetForm}`).css("color","var(--primary-color)");
+			}
+	  	}
+	});
+}
