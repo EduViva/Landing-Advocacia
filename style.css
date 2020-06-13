@@ -35,6 +35,12 @@
     }  
 }
 @media(max-width: 425px){
+    #img-bg{
+        height: 20vh;
+    }
+    #middle-text{
+        margin-bottom: 8px !important;
+    }
     /*section clientes*/
     .slider-clientes{
         height: 40vh !important;
