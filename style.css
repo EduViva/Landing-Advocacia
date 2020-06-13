@@ -113,6 +113,9 @@
         margin-top: -8%;
         margin-bottom: 8%;
     }
+    .princ-text{
+        font-size: 15pt;
+    }
     /*Section duvidas*/
     .bi-chevron-down{
         float: right;
