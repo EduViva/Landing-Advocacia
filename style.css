@@ -46,9 +46,6 @@
         padding-top: 30px !important;
     }
     /*section equipe*/
-    .section-equipe{
-        margin-top: 8% !important;
-    }
     .img-equipe img{
         display: none;
     }
@@ -124,11 +121,11 @@
 
     /*section equipe*/
     .section-equipe{
-        margin-top: -8%;
+        margin-top: 15%;
         margin-bottom: 8%;
     }
     .princ-text{
-        margin-top: 1.1rem;
+        margin-top: 1.5rem;
         font-size: 14.9pt;
         background: rgba(255,255,255,.4);
     }

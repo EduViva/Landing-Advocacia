@@ -148,7 +148,6 @@ function contactSubmited(e){
 	console.log(targetForm);
 
 	if(targetForm == "contact-upper"){
-		console.log('alo');
 		var nome = $('.input-nome')[0].value;
 		var tel = $('.input-tel')[0].value;
 	} else if(targetForm == "contact-down"){
@@ -173,7 +172,7 @@ function contactSubmited(e){
   
 function sendMessage(message,targetForm){
 	$.ajax({
-		url: `contact.php`,
+		url: `/contact.php`,
 		type: "POST",
 		data: {'message': message},
 		cache: false,
