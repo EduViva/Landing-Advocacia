@@ -1,10 +1,6 @@
 <?php
 
-header('Content-Type: text/html; charset=utf-8');
-
 $arr = $_POST['message'];
-
-
 
 $nome = !(empty($arr['name'])) ? $arr['name'] : "";
 $telefone = !(empty($arr['telefone'])) ? $arr['telefone'] : "";
