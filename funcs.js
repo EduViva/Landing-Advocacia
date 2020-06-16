@@ -172,7 +172,7 @@ function contactSubmited(e){
   
 function sendMessage(message,targetForm){
 	$.ajax({
-		url: `http://localhost/site%20advocacia/contact.php`,
+		url: `/contact.php`,
 		type: "POST",
 		data: {'message': message},
 		cache: false,
