@@ -23,9 +23,11 @@
 
 
    //Import the PHPMailer class into the global namespace
-   require("PHPMailer/PHPMailer.php");
-   require("PHPMailer/SMTP.php");
-   require("PHPMailer/Exception.php");
+   require("./PHPMailer-master/src/PHPMailer.php");
+   require("./PHPMailer-master/src/SMTP.php");
+   require("./PHPMailer-master/src/Exception.php");
+   require("./PHPMailer-master/class.phpmailer.php");
+   require("./PHPMailer-master/class.smtp.php");
    
    $mail = new PHPMailer();
    
