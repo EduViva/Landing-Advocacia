@@ -169,7 +169,7 @@ function contactSubmited(e){
 
 	sendMessage(data,targetForm);
 }
-  
+  //fantin2020imhoff
 function sendMessage(message,targetForm){
 	$.ajax({
 		url: `/contact.php`,
