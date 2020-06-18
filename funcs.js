@@ -172,7 +172,7 @@ function contactSubmited(e){
   //fantin2020imhoff
 function sendMessage(message,targetForm){
 	$.ajax({
-		url: `/contact.php`,
+		url: `/contact2.php`,
 		type: "POST",
 		data: {'message': message},
 		cache: false,
