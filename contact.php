@@ -1,4 +1,5 @@
 <?php
+    namespace MyProject;
 
     $arr = $_POST['message'];
 
@@ -83,13 +84,9 @@
     //SMTP needs accurate times, and the PHP time zone MUST be set
     //This should be done in your php.ini, but this is how to do it if you don't have access to that
     date_default_timezone_set('America/Sao_Paulo');
-    
-    namespace MyProject;
 
-    namespace MyProject;
+    require './PHPMailer-master/PHPMailerAutoload.php';
     use PHPMailer\PHPMailer\PHPMailer;
-    require 'vendor/autoload.php';
-    $mail = new PHPMailer;
     
     //Create a new PHPMailer instance
     $mail = new PHPMailer;
@@ -160,5 +157,24 @@
         #    echo "Message saved!";
         #}
     }
+
+    //Section 2: IMAP
+    //IMAP commands requires the PHP IMAP Extension, found at: https://php.net/manual/en/imap.setup.php
+    //Function to call which uses the PHP imap_*() functions to save messages: https://php.net/manual/en/book.imap.php
+    //You can use imap_getmailboxes($imapStream, '/imap/ssl') to get a list of available folders or labels, this can
+    //be useful if you are trying to get this working on a non-Gmail IMAP server.
+    /*function save_mail($mail) {
+        //You can change 'Sent Mail' to any other folder or tag
+        $path = "{imap.gmail.com:993/imap/ssl}[Gmail]/Sent Mail";
+
+        //Tell your server to open an IMAP connection using the same username and password as you used for SMTP
+        $imapStream = imap_open($path, $mail->Username, $mail->Password);
+
+        $result = imap_append($imapStream, $path, $mail->getSentMIMEMessage());
+        imap_close($imapStream);
+
+        return $result;
+    }
+*/
 
 ?>
