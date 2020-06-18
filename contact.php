@@ -1,5 +1,4 @@
 <?php
-    namespace MyProject;
 
     $arr = $_POST['message'];
 
@@ -10,95 +9,19 @@
 
 
     //echo $nome .", ". $mail .", ". $telefone .", ". $msg;
-/*
-    $to = "eduardovivaa@gmail.com";
-    $assunto = "Novo cadastro no site";
-    $mensagem = "Ola, você recebeu um e-mail de ". $mail . $telefone;
-    $mensagem += "--------------------------------------------------";
-    $mensagem += $msg;
-    echo mail($to,$assunto,$mensagem);
-*/
-    //Se salvar no banco de dados echo true se der erro no Banco de dados echo false;
 
 
+    // The IMAP section shows how to save this message to the 'Sent Mail' folder using IMAP commands.
 
-/*
-   //Import the PHPMailer class into the global namespace
-   require("./PHPMailer-master/src/PHPMailer.php");
-   require("./PHPMailer-master/src/SMTP.php");
-   require("./PHPMailer-master/src/Exception.php");
-   require("./PHPMailer-master/class.phpmailer.php");
-   require("./PHPMailer-master/class.smtp.php");
-   
-   $mail = new PHPMailer();
-   
-   // Define que a mensagem será SMTP
-   $mail->IsSMTP();
-   
-   // Host do servidor SMTP externo, como o SendGrid.
-   $mail->Host = "smtp.gmail.com";
-   
-   // Autenticação | True
-   $mail->SMTPAuth = true;
-   
-   // Usuário do servidor SMTP
-   $mail->Username = 'eduardovivaa@gmail.com';
-   
-   // Senha da caixa postal utilizada
-   $mail->Password = 'gravatai72';
-   
-   $mail->From = "eduardovivaa@gmail.com";
-   $mail->FromName = "Eduardo Viva";
-   $mail->AddAddress('eduxablaus9@gmail.com', 'Eduxx');
-   
-   // Define que o e-mail será enviado como HTML | True
-   $mail->IsHTML(true);
-   
-   // Assunto da mensagem
-   $mail->Subject = "Mensagem Teste";
-   
-   // Conteúdo no corpo da mensagem
-   $mail->Body = 'Conteudo da mensagem';
-   
-   // Conteúdo no corpo da mensagem(texto plano)
-   $mail->AltBody = 'Conteudo da mensagem em texto plano';
-   
-   //Envio da Mensagem
-   $enviado = $mail->Send();
-   
-   $mail->ClearAllRecipients();
-   
-   if ($enviado) {
-     echo "E-mail enviado com sucesso!";
-   } else {
-     echo "Não foi possível enviar o e-mail.";
-     echo "Motivo do erro: " . $mail->ErrorInfo;
-   }
-   */
-
-   /**
-     * This example shows settings to use when sending via Google's Gmail servers.
-     * The IMAP section shows how to save this message to the 'Sent Mail' folder using IMAP commands.
-    */
-
-    //SMTP needs accurate times, and the PHP time zone MUST be set
-    //This should be done in your php.ini, but this is how to do it if you don't have access to that
     date_default_timezone_set('America/Sao_Paulo');
 
     require './PHPMailer-master/PHPMailerAutoload.php';
-    use PHPMailer\PHPMailer\PHPMailer;
-    
+
     //Create a new PHPMailer instance
     $mail = new PHPMailer;
 
     //Tell PHPMailer to use SMTP
     $mail->isSMTP();
-
-    //Enable SMTP debugging
-    // 0 = off (for production use)
-    // 1 = client messages
-    // 2 = client and server messages
-    $mail->SMTPDebug = 2;
 
     //Ask for HTML-friendly debug output
     $mail->Debugoutput = 'html';
