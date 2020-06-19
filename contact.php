@@ -1,6 +1,6 @@
 <?php
     
-    include "./dbAccess.php";
+    require "./dbAccess.php";
 
     $arr = $_POST['message'];
 
@@ -18,6 +18,7 @@
     }
 
     $return = $db->query($query);
+    $lastId = mysqli_insert_id($db); 
 
     if($return){
         echo mysqli_insert_id($db);
@@ -25,53 +26,81 @@
         echo false;
     }
 
-/*
-    date_default_timezone_set('America/Sao_Paulo');
-
-    require './PHPMailer-master/PHPMailerAutoload.php';
-
-    //Create a new PHPMailer instance
-    $mail = new PHPMailer;
-
-    $mail->isSMTP();
+    if($local == 'news'){
     
-    $mail->Debugoutput = 'html';
-    
-    $mail->Host = 'smtp.gmail.com';
-    $mail->Port = 587;
+        date_default_timezone_set('America/Sao_Paulo');
 
-    $mail->SMTPSecure = 'tls';
-    $mail->SMTPAuth = true;
+        require './PHPMailer-master/PHPMailerAutoload.php';
 
-    $mail->Username = "eduardovivaa@gmail.com";
-    $mail->Password = "gravatai72";
+        //Create a new PHPMailer instance
+        $mail = new PHPMailer;
 
-    $mail->setFrom('eduardovivaa@gmail.com', 'Eduardo Viva');
-    //Set an alternative reply-to address
-    //$mail->addReplyTo('replyto@example.com', 'First Last');
-    
-    //Set who the message is to be sent to
-    $mail->addAddress('eduxablaus9@gmail.com', 'XblDu');
+        $mail->isSMTP();
+        
+        $mail->Debugoutput = 'html';
+        
+        $mail->Host = 'smtp.gmail.com';
+        $mail->Port = 587;
 
-    //Set the subject line
-    $mail->Subject = 'PHPMailer GMail SMTP test';
+        $mail->SMTPSecure = 'tls';
+        $mail->SMTPAuth = true;
 
-    //Read an HTML message body from an external file, convert referenced images to embedded,
-    //convert HTML into a basic plain-text alternative body
-    //$mail->msgHTML(file_get_contents('contents.html'), dirname(__FILE__));
-    $mail->Body = "Ola";
-    //Replace the plain text body with one created manually
-    $mail->AltBody = 'This is a plain-text message body';
+        $mail->Username = "eduardovivaa@gmail.com";
+        $mail->Password = "gravatai72";
 
-    //Attach an image file
-    //$mail->addAttachment('images/phpmailer_mini.png');
+        $mail->setFrom('eduardovivaa@gmail.com', 'Eduardo Viva');
+        //Set an alternative reply-to address
+        //$mail->addReplyTo('replyto@example.com', 'First Last');
+        
+        //Set who the message is to be sent to
+        $mail->addAddress($mail, 'Fantin e Imhoff');
 
-    //send the message, check for errors
-    if (!$mail->send()) {
-        echo "Mailer Error: " . $mail->ErrorInfo;
-    } else {
-        echo "Message sent!";
+        //Set the subject line
+        $mail->Subject = 'Cadastrado na newsletter de Fantin & Imhoff Advogados';
+
+        //Read an HTML message body from an external file, convert referenced images to embedded,
+        //convert HTML into a basic plain-text alternative body
+        //$mail->msgHTML(file_get_contents('contents.html'), dirname(__FILE__));
+        $mail->Body = 'Olá! Você está cadastrado na newsletter de Fantin & Imhoff Advogados.';
+        
+        //Replace the plain text body with one created manually
+        $mail->AltBody = 'Olá! Você está cadastrado na newsletter de Fantin & Imhoff Advogados.';
+
+        //Attach an image file
+        //$mail->addAttachment('images/phpmailer_mini.png');
+
+        //send the message, check for errors
+        if (!$mail->send()) {
+           $sql = "UPDATE `newsletter` SET enviado = 'Não' WHERE id = '". $lastId . "'";
+        } else {
+            $sql = "UPDATE `newsletter` SET enviado = 'Sim' WHERE id = '". $lastId . "'";
+        }
+
+        $db->query($sql);
+
+        ///////////////////////////////////////////
+        //Enviando o e-mail para o administrador//
+        //////////////////////////////////////////
+
+        $myEmail = "contato@meudominio.com";//é necessário informar um e-mail do próprio domínio
+        $headers = "From: $myEmail\r\n";
+        $headers .= "Reply-To: $myEmail\r\n";
+
+        /*abaixo contém os dados que serão enviados para o email
+        cadastrado para receber o formulário*/
+        $subject = "Um novo contato foi cadastrado no site";
+
+        $corpo = "Olá, um novo contato foi cadastrado no site\n";
+        $corpo .= "Nome: " . $$nome . "\n";
+        $corpo .= "Telefone: " . $telefone . "\n";
+        $corpo .= "Email: " . $mail . "\n";
+        $corpo .= "Mensagem: " . $msg . "\n";
+
+        $email_to = 'seu e-mail aqui que irá receber a mensagem';
+        //não esqueça de substituir este email pelo seu.
+
+        $status = mail($email_to, $subject, $corpo, $headers);
+        //enviando o email.
     }
 
-*/
 ?>
