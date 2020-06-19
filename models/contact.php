@@ -30,7 +30,7 @@
     
         date_default_timezone_set('America/Sao_Paulo');
 
-        require './PHPMailer-master/PHPMailerAutoload.php';
+        require '../PHPMailer-master/PHPMailerAutoload.php';
 
         //Create a new PHPMailer instance
         $mail = new PHPMailer;

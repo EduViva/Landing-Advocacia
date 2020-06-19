@@ -5,10 +5,6 @@ $(function(){
 	lazyload();
 
 	$('.input-tel').mask('(00) 0000-00000');
-	
-    if(window.matchMedia('(max-width: 768px)').matches){
-        document.getElementsByClassName('social')[0].remove();
-	}
 
 	let input_news = document.getElementById('input-news');
 	input_news.addEventListener("input", () => {
@@ -71,61 +67,6 @@ $(document).on("scroll",function(){
 
 	var scroll = $(window).scrollTop();
 
-	//Topbar
-	if(window.matchMedia('(max-width: 768px)').matches){
-		if(scroll > 300){
-            $('.navbar-collapse').css("display","none");
-            $('.navbar').css({
-				'background':'rgba(255,255,255,.8)',
-				'box-shadow':'-2px 1.5px 20px black',
-			});
-			$('.nav-item').addClass("scrolled");
-            $('.nav-active').css('color','var(--complementar-1)');
-        } else {
-            $('.navbar').css({
-				'background':'transparent',
-				'background-image':' linear-gradient(to bottom, var(--secondary-color), var(--primary-color))',
-			});
-			$('.nav-item').removeClass("scrolled");
-            $('.nav-active').css('color','rgba(0,0,0,.9)');
-        }
-	}
-
-	if(window.matchMedia('(min-width: 769px)').matches){
-		if(scroll > 300){
-			$('.navbar').css({
-				'background':'rgba(255,255,255,.8)',
-				'box-shadow':'-2px 1.5px 20px black',
-				'height':'50px',
-			});
-			$('.img-logo').css({
-				"height":"0",
-				"width":"0"
-            });
-            
-			$('.nav-item').addClass("scrolled");
-            $('.nav-active').css('color','var(--complementar-1)');
-        
-		} else {
-			$('.navbar').css({
-				'background':'transparent',
-				'background-image':' linear-gradient(to bottom, var(--secondary-color), var(--primary-color))',
-				'height':'68px',
-			});
-			$('.img-logo').css({
-				"height":"52px",
-				"width":"52px"
-            });
-            
-			$('.nav-item').removeClass("scrolled");
-            $('.nav-active').css('color','rgba(0,0,0,.9)');
-            
-		}
-	}
-
-	if(scroll < position || scroll <= 300){
-		$('.navbar-collapse').css("display","block");
-	}
 
 	if (scroll >= 730){
 		$('#middle-text').css('color','var(--secondary-color)');
@@ -176,7 +117,7 @@ function contactSubmited(e){
   
 function sendMessage(message,targetForm){
 	$.ajax({
-		url: `contact.php`,
+		url: '../models/contact.php',
 		type: "POST",
 		data: {'message': message},
 		cache: false,
