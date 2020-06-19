@@ -150,13 +150,16 @@ function contactSubmited(e){
 	if(targetForm == "contact-upper"){
 		var nome = $('.input-nome')[0].value;
 		var tel = $('.input-tel')[0].value;
+		var local = 'contact';
 	} else if(targetForm == "contact-down"){
 		var nome = $('.input-nome')[1].value;
 		var tel = $('.input-tel')[1].value;
 		var msg = $('.input-msg').val();
+		var local = 'message';
 	} else {
 		var mail = $('.input-news').val();
 		console.log(mail);
+		var local = 'news';
 	}
   
 	let data = {
@@ -164,15 +167,16 @@ function contactSubmited(e){
 		telefone: tel,
 		mail: mail,
 		message: msg,
+		local: local,
 		url: window.location.href
 	};
 
 	sendMessage(data,targetForm);
 }
-  //fantin2020imhoff
+  
 function sendMessage(message,targetForm){
 	$.ajax({
-		url: `/contact.php`,
+		url: `contact.php`,
 		type: "POST",
 		data: {'message': message},
 		cache: false,
@@ -184,7 +188,11 @@ function sendMessage(message,targetForm){
 			console.log(response);
 			
 			if (response) {
-				$(`#response-${targetForm}`).html("Dados enviados com sucesso!");
+				$(`#response-${targetForm}`).html({
+					'contact-upper': 'Dados enviados com sucesso!',
+					'contact-down': 'Mensagem enviada com sucesso!',
+					'contact-news': 'Cadastrado com sucesso!',
+				}[targetForm]);
 				$(`#response-${targetForm}`).css("color","black");
 				$('input').val("");
 				$('textarea').val("");

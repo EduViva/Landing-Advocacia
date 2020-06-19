@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <meta charset="UTF-8">
+        <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Advogados</title>
 
@@ -123,7 +123,7 @@
 
                         <form class="contact-form" id="contact-upper" onsubmit="contactSubmited(event)" netlify>
 
-                            <input type="text" name="nome" placeholder="Nome" class="col-9 col-md-9 input-nome input-upper" required>
+                            <input type="text" name="nome" placeholder="Nome" maxlength="60" class="col-9 col-md-9 input-nome input-upper" required>
                             <input type="tel" name="telefone" placeholder="Telefone" class="col-9 col-md-9 input-tel input-upper" required>    
                             
                             <button class="col-9 col-md-9 submit-form input-upper send-contact-upper" name="enviar" type="submit">Enviar</button>
@@ -309,7 +309,7 @@
                                     <form class="contact-form" id="contact-down" onsubmit="contactSubmited(event)" netlify>
                                         
                                         <div class="label-float">
-                                            <input type="text" name="nome" placeholder=" " class="col-md-9 col-sm-12 input-nome input-down" required>
+                                            <input type="text" maxlength="60" name="nome" placeholder=" " class="col-md-9 col-sm-12 input-nome input-down" required>
                                             <label class="input-label">Nome</label>
                                         </div>
                                         <div class="label-float">
@@ -318,7 +318,7 @@
                                         </div>
                                         
                                         <div class="label-float">
-                                            <textarea name="mensagem" rows="5" placeholder=" " class="input input-msg col-md-9 col-sm-12 input-down"></textarea>
+                                            <textarea name="mensagem" maxlength="500" rows="5" placeholder=" " class="input input-msg col-md-9 col-sm-12 input-down"></textarea>
                                             <label class="textarea-label">Mensagem</label>
                                         </div>
                                         
@@ -343,7 +343,7 @@
                 <form class="col-12 news-form" id="contact-news" onsubmit="contactSubmited(event)" netlify>
                     <div class="col-12 col-md-8 col-lg-5 input-group" style="margin: 0 auto;">
                         <label for="news" class="label-news" id="response-contact-news">Digite seu e-mail para receber novidades</label>
-                        <input type="email" name="news" placeholder="Digite seu e-mail para receber novidades" class="col-10 input input-news" id="input-news" aria-label="E-mail" aria-describedby="but-enviar">
+                        <input type="email" name="news" maxlength="100" placeholder="Digite seu e-mail para receber novidades" class="col-10 input input-news" id="input-news" aria-label="E-mail" aria-describedby="but-enviar">
                         
                         <div class="input-group-append col-2 div-button" style="padding: 0;">
                             <button class="btn btn-outline-secondary news-send send-contact-news" style="width: 100%;" type="submit" id="button-addon2">Enviar</button>
