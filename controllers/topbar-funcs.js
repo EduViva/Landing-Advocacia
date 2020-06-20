@@ -9,6 +9,7 @@ $(function(){
 $(document).on("scroll",function(){
 
 	var scroll = $(window).scrollTop();
+	var position = 0;
 
 	//Topbar
 	if(window.matchMedia('(max-width: 768px)').matches){
