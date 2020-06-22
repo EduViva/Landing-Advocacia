@@ -77,30 +77,30 @@
         }
 
         $db->query($sql);
-
-        ///////////////////////////////////////////
-        //Enviando o e-mail para o administrador//
-        //////////////////////////////////////////
-
-        $myEmail = "contato@meudominio.com";//é necessário informar um e-mail do próprio domínio
-        $headers = "From: $myEmail\r\n";
-        $headers .= "Reply-To: $myEmail\r\n";
-
-        /*abaixo contém os dados que serão enviados para o email
-        cadastrado para receber o formulário*/
-        $subject = "Um novo contato foi cadastrado no site";
-
-        $corpo = "Olá, um novo contato foi cadastrado no site\n";
-        $corpo .= "Nome: " . $$nome . "\n";
-        $corpo .= "Telefone: " . $telefone . "\n";
-        $corpo .= "Email: " . $mail . "\n";
-        $corpo .= "Mensagem: " . $msg . "\n";
-
-        $email_to = 'seu e-mail aqui que irá receber a mensagem';
-        //não esqueça de substituir este email pelo seu.
-
-        $status = mail($email_to, $subject, $corpo, $headers);
-        //enviando o email.
     }
+
+    ///////////////////////////////////////////
+    //Enviando o e-mail para o administrador//
+    //////////////////////////////////////////
+
+    $myEmail = "contato@meudominio.com";//é necessário informar um e-mail do próprio domínio
+    $headers = "From: $myEmail\r\n";
+    $headers .= "Reply-To: $myEmail\r\n";
+
+    /*abaixo contém os dados que serão enviados para o email
+    cadastrado para receber o formulário*/
+    $subject = "Um novo contato foi cadastrado no site";
+
+    $corpo = "Olá, um novo contato foi cadastrado no site\n";
+    $corpo .= "Nome: " . $$nome . "\n";
+    $corpo .= "Telefone: " . $telefone . "\n";
+    $corpo .= "Email: " . $mail . "\n";
+    $corpo .= "Mensagem: " . $msg . "\n";
+
+    $email_to = 'seu e-mail aqui que irá receber a mensagem';
+    //não esqueça de substituir este email pelo seu.
+
+    $status = mail($email_to, $subject, $corpo, $headers);
+    //enviando o email.
 
 ?>

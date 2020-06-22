@@ -6,10 +6,11 @@ $(function(){
 
 });
 
+var topPos = $(window).scrollTop();
+
 $(document).on("scroll",function(){
 
 	var scroll = $(window).scrollTop();
-	var position = 0;
 
 	//Topbar
 	if(window.matchMedia('(max-width: 768px)').matches){
@@ -63,10 +64,10 @@ $(document).on("scroll",function(){
 		}
 	}
 
-	if(scroll < position || scroll <= 300){
+	if(scroll < topPos || scroll <= 300){
 		$('.navbar-collapse').css("display","block");
 	}
 
-	position = scroll;
+	topPos = scroll;
 
 });

@@ -1,7 +1,10 @@
 @media (min-width: 769px){
-    .section-links-uteis{
+    .section-links-uteis,.section-contact-page{
         height: 93vh;
         padding-top: 15vh;
+    }
+    .section-contact-page{
+        margin-bottom: 45px;
     }
     .div-utile-links{
         margin-top: 12vh;
@@ -23,12 +26,19 @@
     }
 }
 @media (max-width: 768px){
+    .section-contact-page{
+        padding-top: 25vh;
+    }
+    .section-links-uteis{
+        padding-top: 28vh;
+    }
     .utile-links-col{
         margin: 25px auto;
     }
-    .section{
-        height: 100vh;
-        padding-top: 28vh;
+    .trt4{
+        padding-bottom: 20px;
+        padding-top: 20px;
+        height: 200px;
     }
 }
 
@@ -40,4 +50,8 @@
 }
 .utile-links-col{
     text-align: center;
+}
+.contact-page-text{
+    text-align: center;
+    font-size: 14pt;
 }

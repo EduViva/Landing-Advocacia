@@ -47,8 +47,8 @@
             <div class="navbar-collapse nav-items" id="navbarNavAltMarkup">
                 <div class="links">
                     <a class="nav-item nav-link nav-home order-1 order-sm-1" href="../index.html">Início</a>
-                    <a class="nav-item nav-link nav-features order-4 order-sm-2" href="./contato.html">Contato</a>
-                    <a class="nav-item nav-link nav-active nav-pricing order-3 order-sm-3" href="./utile-links.html">Links Úteis <span class="sr-only">(atual)</span></a>
+                    <a class="nav-item nav-link nav-active nav-features order-4 order-sm-2" href="./contato.html">Contato <span class="sr-only">(atual)</span></a>
+                    <a class="nav-item nav-link nav-pricing order-3 order-sm-3" href="./utile-links.html">Links Úteis</a>
                     <a class="nav-item nav-link nav-contact order-2 order-sm-4" href="javascript:void(0)">Nós</a>
                 </div>
             </div>
@@ -61,46 +61,98 @@
         </nav>
 
 
-        <section class="section section-links-uteis">
+        <section class="section section-contact-page">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-12 section-links-title">
-                        <h1>Links Úteis</h1>
-                        <p>Para te ajudar a encontrar o que precisa</p>
+                    <div class="col-12">
+                        <p class="contact-page-text">
+                            Prezamos por uma linha de atendimento personalizada, oferecendo consultorias adaptadas para cada situação de maneira assertiva e veloz.
+                        </p>
                     </div>
                 </div>
             </div>
-            
-            <div class="div-utile-links container-fluid">
-                <div class="row">
-                    <div class="col-10 col-md-3 utile-links-col trf4">
-                        <a href="https://www2.trf4.jus.br/trf4/controlador.php?acao=consulta_processual_pesquisa" target="_blank" title="Tribunal Regional Federal da 4ª Região">
-                            <img src="../sources/trf4-logo.png" alt="">
-                            <div class="link-titles">
-                                <strong>TRF4 - Tribunal da 4ª Região</strong>
-                                <p>Consulta processual unificada</p>
+
+            <div class="container-fluid">
+                <div class="row align-items-center" style="height: 80%;">
+                    <div class="contact-board container-fluid">
+                        <div class="row row-title-board">
+                            <h4 class="title-board">Entre em contato ou venha até o nosso escritório</h4>
+                        </div>
+                        <div class="row align-items-center" style="height: 83%;">
+                            
+                            <div class="col-md col-sm-12 dados order-3 order-lg-1">
+                                <div class="row map-row">
+                                    <div class="col-12 col-md-3">
+                                        <img src="../sources/map-marker.png" height="60px" alt="">
+                                    </div>    
+                                    
+                                    <div class="col-md-6 col-10 text-dados endereco" style="font-size: 14pt;">
+                                        Av. Presidente Getúlio Vargas, 2394
+                                        
+                                        Centro - Alvorada/RS
+                                    </div>
+                                </div>
+                                
+                                <a href="" class="como-chegar" data-toggle="modal" data-target="#modal-chegar">Como chegar</a>
+    
+                                <div class="row whats-row">
+                                    <div class="col-12 col-md-3" style="padding-right: 0;">
+                                        <a href="">
+                                            <img src="../sources/whats-icon.png" height="45px" alt="Whatsapp">
+                                        </a>
+                                        
+                                    </div>    
+                                    
+                                    <div class="col-md-6 col-10 text-dados number" style="font-size: 15pt;">
+                                        (51)99986-5349
+                                    </div>
+                                </div>
+    
+                                <div class="row social-row">
+                                    <div class="col-12">
+                                        <a class="social-link" href="https://www.facebook.com/fantineimhoffadvogados/">
+                                            <img src="../sources/face-icon.png" height="25px" alt="Facebook">
+                                        </a>
+                                        <a class="social-link" href="https://www.instagram.com/fantineimhoffadvogados/">
+                                            <img src="../sources/insta-icon.png" height="25px" alt="Instagram">
+                                        </a>
+                                        <a class="social-link" href="">
+                                            <img src="../sources/telegram-icon-black.png" height="23px" alt="Telegram">
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
-                        </a>
-                    </div>
-                    <div class="col-10 col-md-3 utile-links-col tjrs">
-                        <a href="https://www1.tjrs.jus.br/buscas/proc.html?" target="_blank" title="Tribunal de Justiça do Estado do Rio Grande do Sul">
-                            <img src="../sources/tjrs-logo2.png" alt="">
-                            <div class="link-titles">
-                                <strong>TJRS - Tribunal de justiça</strong>
-                                <p>Consulta processual</p>
+    
+                            <div class="separator order-2 order-lg-2"></div>
+                            
+                            <div class="col-md col-sm-12 form-div-down order-1 order-lg-3">
+                                <div class="row">
+                                    <div class="col-10 col-form-down">
+                                        <form class="contact-form" id="contact-down" onsubmit="contactSubmited(event)" netlify>
+                                            
+                                            <div class="label-float">
+                                                <input type="text" maxlength="60" name="nome" placeholder=" " class="col-md-9 col-sm-12 input-nome input-down" required>
+                                                <label class="input-label">Nome</label>
+                                            </div>
+                                            <div class="label-float">
+                                                <input type="tel" name="telefone" autocomplete="tel-national" placeholder=" " class="col-md-9 col-sm-12 input-tel nome-down input-down" required>
+                                                <label class="input-label">Telefone</label>
+                                            </div>
+                                            
+                                            <div class="label-float">
+                                                <textarea name="mensagem" maxlength="500" rows="5" placeholder=" " class="input input-msg col-md-9 col-sm-12 input-down"></textarea>
+                                                <label class="textarea-label">Mensagem</label>
+                                            </div>
+                                            
+                                            <button class="col-md-9 col-sm-12 submit-form input-down send-contact-down" name="enviar" type="submit">Enviar</button>
+                                            <p id="response-contact-down"></p>
+    
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
-                        </a>
+                        </div>
                     </div>
-                    <div class="col-10 col-md-3 utile-links-col trt4">
-                        <a href="https://www.trt4.jus.br/portais/trt4" target="_blank" title="Tribunal Regional do Trabalho da 4ª Região">
-                            <img src="../sources/trt4-logo.png" alt="">
-                            <div class="link-titles">
-                                <strong>TRT4 - Tribunal do Trabalho</strong>
-                                <p>Justiça do trabalho da 4ª região</p>
-                            </div>
-                        </a>
-                    </div>
-                    
                 </div>
             </div>
         </section>
