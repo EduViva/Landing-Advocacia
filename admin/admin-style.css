@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*font-family: 'Montserrat', sans-serif;*/
+    --primary-color: #D62A2F;
+    --secondary-color: #262626;
+    --complementar-1: #931F1D;
+    --complementar-2: #6D7275;
+    --last-color: whitesmoke;
+}
+.navbar a h2{
+    display: inline-block;
+    line-height: 47px;
+    margin-left: 12px;
+}
+.navbar{
+    background-image: linear-gradient(to bottom, var(--secondary-color), var(--primary-color));
+    /*box-shadow: -2px 1.5px 20px var(--complementar-2);*/
+    width: 100%;
+    font-size: 13.5pt;
+    z-index: 99;
+}

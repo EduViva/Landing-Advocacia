@@ -3,7 +3,11 @@
         height: 93vh;
         padding-top: 15vh;
     }
-    .section-contact-page{
+    .section-quem-somos{
+        padding-top: 15vh;
+        padding-right: 25px;
+    }
+    .section-contact-page, .section-quem-somos{
         margin-bottom: 45px;
     }
     .div-utile-links{
@@ -21,12 +25,16 @@
     .trt4 .link-titles{
         margin-top: 11px;
     }
+    .img-somos{
+        margin-top: 25px;
+        height: 95%;
+    }
     footer{
         margin-top: 0 !important;
     }
 }
 @media (max-width: 768px){
-    .section-contact-page{
+    .section-contact-page, .section-quem-somos{
         padding-top: 25vh;
     }
     .section-links-uteis{
@@ -39,6 +47,11 @@
         padding-bottom: 20px;
         padding-top: 20px;
         height: 200px;
+    }
+}
+@media(min-width: 768px) and (max-width: 1024px){
+    .img-somos{
+        width: 50% !important;
     }
 }
 
@@ -54,4 +67,24 @@
 .contact-page-text{
     text-align: center;
     font-size: 14pt;
+}
+.parent-img-somos{
+    text-align: center;
+}
+.img-somos{
+    width: 80%;
+    border-radius: 3px;
+}
+.parent-text-somos{
+    margin-top: 25px;
+    background-color: white;
+    border-radius: 3px;
+    padding-top: 25px;
+}
+.title-somos{
+    text-align: center;
+    margin-bottom: 25px;
+}
+.text-somos{
+    text-align: justify;
 }
