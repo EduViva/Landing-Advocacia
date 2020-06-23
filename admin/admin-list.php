@@ -8,10 +8,14 @@ $atualAno = date('Y');
 
 $Q_cadastros = "SELECT * FROM `cadastros`";
 $Q_newsletter = "SELECT * FROM `newsletter`";
+$Q_faq = "SELECT * FROM `faq`";
 
 $return_cad = $db->query($Q_cadastros);
 $return_news = $db->query($Q_newsletter);
+$return_faq = $db->query($Q_faq);
 
+
+/*
 $total_cad = $db->query("SELECT COUNT(*) FROM cadastros");
 $total_news = $db->query("SELECT COUNT(*) FROM newsletter");
 
@@ -25,7 +29,7 @@ if($total_news){
         $news_num = $row['COUNT(*)'];
     }
 }
-
+*/
 ?>
 
 <!DOCTYPE html>
@@ -56,29 +60,90 @@ if($total_news){
 
         <main>
             <div class="container-fluid">
-                <table class="ls-table ls-no-hover ls-table-striped">
+                
+                <ul class="ls-tabs-nav">
+                    <li class="ls-active"><a data-ls-module="tabs" href="#cadastros_cont">Cadastros</a></li>
+                    <li><a data-ls-module="tabs" href="#newsletter_cont">Newsletter</a></li>
+                    <li><a data-ls-module="tabs" href="#faq_cont">FAQ</a></li>
+                </ul>
+                
+                <div class="ls-tabs-container">
+                    
+                    <div id="cadastros_cont" class="ls-tab-content ls-active">
+                        
+                        <table class="ls-table ls-no-hover ls-table-striped">
 
-                    <thead>
-                        <tr>
-                            <th>Nome</th>
-                            <th class="hidden-xs">Telefone</th>
-                            <th>Mensagem</th>
-                        </tr>
-                    </thead>
+                            <thead>
+                                <tr>
+                                    <th style="width: 25%;">Nome</th>
+                                    <th class="hidden-xs" style="width: 25%;">Telefone</th>
+                                    <th style="width: 45%;">Mensagem</th>
+                                    <th style="width: 5%;"></th>
+                                </tr>
+                            </thead>
 
-                    <tbody>
+                            <tbody>
+                                <?php
+                                    foreach ($return_cad as $key => $value) {
+                                        echo "<tr id=cad-" . $value['id'] . "><td id=cad-nome-" . $value['id'] . ">" . $value['nome'] . "</td>";
+                                        echo "<td id=cad-tel-" . $value['id'] . " class='hidden-xs'>" . $value['telefone'] . "</td>";
+                                        echo "<td id=cad-msg-" . $value['id'] . ">" . $value['mensagem'] . "</td>";
+                                        echo "<td id=cad-excluir-" . $value['id'] . "><span onclick = excluir(" . $value['id'] . ",\"cadastros\") class=\"ls-ico-remove ls-cursor-pointer ls-btn-dark\" title=\"Excluir\"></span></td>";  
+                                    }
+                                ?>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                    
+                    <div id="newsletter_cont" class="ls-tab-content">
+                        
+                        <table class="ls-table ls-no-hover ls-table-striped">
+
+                            <thead>
+                                <tr>
+                                    <th style="width: 47.5%;">E-mail</th>
+                                    <th class="hidden-xs" style="width: 47.5%;">E-mail enviado</th>
+                                    <th style="width: 5%;"></th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <?php
+                                    foreach ($return_news as $key => $value) {
+                                        echo "<tr id=news-" . $value['id'] . "><td id=news-email-" . $value['id'] . ">" . $value['email'] . "</td>";
+                                        echo "<td id=news-enviado-" . $value['id'] . " class='hidden-xs'>" . $value['enviado'] . "</td>";
+                                        echo "<td id=news-excluir-" . $value['id'] . "><span onclick = excluir(" . $value['id'] . ",\"newsletter\") class=\"ls-ico-remove ls-cursor-pointer ls-btn-dark\" title=\"Excluir\"></span></td>";        
+                                    }
+                                ?>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                    
+                    <div id="faq_cont" class="ls-tab-content">
+                            
                         <?php
-                            foreach ($return_cad as $key => $value) {
-                                echo "<tr id=" . $value['id'] . "><td id=nome" . $value['id'] . ">" . $value['nome'] . "</td>";
-                                echo "<td id=telefone" . $value['id'] . " class='hidden-xs'>" . $value['telefone'] . "</td>";
-                                echo "<td id=mensagem" . $value['id'] . ">" . $value['mensagem'] . "</td>";
-                                echo "<td id=excluir" . $value['id'] . "><span style='margin-left: -85px' onclick = excluir(" . $value['id'] . ",\"brindes\") class=\"ls-ico-remove ls-cursor-pointer ls-btn-dark\" title=\"Excluir\"></span></td>";
-                                
+                            foreach ($return_faq as $key => $value) {
+                                echo '<div class="ls-list">';
+                                echo    '<header class="ls-list-header">';
+                                echo        '<div class="ls-list-title col-md-9">';
+                                echo            '<input type="text" value="'.$value[`titulo`].'" class="title-faq">';
+                                echo            '<textarea type="text" class="content-faq">'.$value[`conteudo`].'</textarea>';
+                                echo        '</div>';
+                                echo        '<div class="col-md-3 ls-txt-right">';
+                                echo            '<a href="#" class="ls-btn-primary">Salvar</a>';
+                                echo        '</div>';
+                                echo    '</header>';
+                                echo '</div>';
                             }
                         ?>
-
-                    </tbody>
-                </table>
+                                
+                    </div>
+                
+                </div>
 
                 <embed height="1" type="audio/midi" width="1" src="../controllers/Alarm.mp3" loop="false" autostart="true" />
             
