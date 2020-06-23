@@ -21,3 +21,24 @@
     font-size: 13.5pt;
     z-index: 99;
 }
+label{
+    display: block !important;
+    font-size: 15pt;
+    font-weight: bold;
+}
+.label-content{
+    margin-top: 18px;
+}
+input,textarea{
+    padding-left: 15px !important;
+    margin-left: 15px !important;
+}
+input{
+    height: 45px;
+}
+.link-salvar{
+    width: 60%;
+}
+.alert-callback{
+    display: none;
+}

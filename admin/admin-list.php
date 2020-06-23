@@ -14,6 +14,8 @@ $return_cad = $db->query($Q_cadastros);
 $return_news = $db->query($Q_newsletter);
 $return_faq = $db->query($Q_faq);
 
+echo '<link rel="stylesheet" href="./admin-style.css">';
+echo '<script src="./admin-funcs.js"></script>';
 
 /*
 $total_cad = $db->query("SELECT COUNT(*) FROM cadastros");
@@ -33,14 +35,13 @@ if($total_news){
 ?>
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="ls-theme-green">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Contatos cadastrados no site</title>
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" href="admin-style.css">
         <script src="https://code.jquery.com/jquery-3.4.1.js" crossorigin="anonymous"></script>
 
         <link href="http://assets.locaweb.com.br/locastyle/3.10.1/stylesheets/locastyle.css" rel="stylesheet" type="text/css">
@@ -53,7 +54,7 @@ if($total_news){
                 <h2 class="brand-name">Fantin & Imhoff</h2>
             </a>
 
-            <small style="text-align: end; width:20%;">A página do administrador</small>
+            <span style="text-align: end; width:20%; color:white;">A página do administrador</span>
 
             <a href="../index.html" style="text-align: end; width:50%;">Ir para o site</a>
         </div>
@@ -85,7 +86,7 @@ if($total_news){
                             <tbody>
                                 <?php
                                     foreach ($return_cad as $key => $value) {
-                                        echo "<tr id=cad-" . $value['id'] . "><td id=cad-nome-" . $value['id'] . ">" . $value['nome'] . "</td>";
+                                        echo "<tr id=row-cadastros-" . $value['id'] . "><td id=cad-nome-" . $value['id'] . ">" . $value['nome'] . "</td>";
                                         echo "<td id=cad-tel-" . $value['id'] . " class='hidden-xs'>" . $value['telefone'] . "</td>";
                                         echo "<td id=cad-msg-" . $value['id'] . ">" . $value['mensagem'] . "</td>";
                                         echo "<td id=cad-excluir-" . $value['id'] . "><span onclick = excluir(" . $value['id'] . ",\"cadastros\") class=\"ls-ico-remove ls-cursor-pointer ls-btn-dark\" title=\"Excluir\"></span></td>";  
@@ -104,7 +105,7 @@ if($total_news){
                             <thead>
                                 <tr>
                                     <th style="width: 47.5%;">E-mail</th>
-                                    <th class="hidden-xs" style="width: 47.5%;">E-mail enviado</th>
+                                    <th class="hidden-xs" style="width: 47.5%;">E-mail automático enviado</th>
                                     <th style="width: 5%;"></th>
                                 </tr>
                             </thead>
@@ -112,7 +113,7 @@ if($total_news){
                             <tbody>
                                 <?php
                                     foreach ($return_news as $key => $value) {
-                                        echo "<tr id=news-" . $value['id'] . "><td id=news-email-" . $value['id'] . ">" . $value['email'] . "</td>";
+                                        echo "<tr id=row-newsletter-" . $value['id'] . "><td id=news-email-" . $value['id'] . ">" . $value['email'] . "</td>";
                                         echo "<td id=news-enviado-" . $value['id'] . " class='hidden-xs'>" . $value['enviado'] . "</td>";
                                         echo "<td id=news-excluir-" . $value['id'] . "><span onclick = excluir(" . $value['id'] . ",\"newsletter\") class=\"ls-ico-remove ls-cursor-pointer ls-btn-dark\" title=\"Excluir\"></span></td>";        
                                     }
@@ -130,11 +131,14 @@ if($total_news){
                                 echo '<div class="ls-list">';
                                 echo    '<header class="ls-list-header">';
                                 echo        '<div class="ls-list-title col-md-9">';
-                                echo            '<input type="text" value="'.$value[`titulo`].'" class="title-faq">';
-                                echo            '<textarea type="text" class="content-faq">'.$value[`conteudo`].'</textarea>';
+                                echo            '<label for="faq-title-'.$value['id'].'" class="col-10">Título</label>';
+                                echo            '<input id="faq-title-'.$value['id'].'" maxlength="65" type="text" value="'.$value['titulo'].'" class="title-faq col-10">';
+                                echo            '<br>';
+                                echo            '<label for="faq-content-'.$value['id'].'" class="label-content col-10">Conteúdo</label>';
+                                echo            '<textarea id="faq-content-'.$value['id'].'" type="text" maxlength="500" rows="6" class="content-faq col-10">'.$value['conteudo'].'</textarea>';
                                 echo        '</div>';
-                                echo        '<div class="col-md-3 ls-txt-right">';
-                                echo            '<a href="#" class="ls-btn-primary">Salvar</a>';
+                                echo        '<div class="col-md-3 ls-txt-center">';
+                                echo            '<a href="javascript:void(0)" onclick=salvar(' . $value["id"] . ') class="ls-btn-primary link-salvar">Salvar</a>';
                                 echo        '</div>';
                                 echo    '</header>';
                                 echo '</div>';
@@ -145,8 +149,16 @@ if($total_news){
                 
                 </div>
 
-                <embed height="1" type="audio/midi" width="1" src="../controllers/Alarm.mp3" loop="false" autostart="true" />
-            
+                <div class="ls-alert-success ls-alert-fixed-bottom alert-callback alert-certo">
+                    <span data-ls-module="dismiss" class="ls-dismiss">&times;</span>
+                    <strong>Sucesso!</strong> O item foi excluído!
+                </div>
+
+                <div class="ls-alert-danger ls-alert-fixed-bottom alert-callback alert-erro">
+                    <span data-ls-module="dismiss" class="ls-dismiss">&times;</span>
+                    <strong>Ops!</strong> <span class="message-error"></span>
+                </div>
+                
             </div>
         </main>
         <script src="http://assets.locaweb.com.br/locastyle/3.10.1/javascripts/locastyle.js" type="text/javascript"></script>

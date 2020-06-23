@@ -3,6 +3,7 @@ var position = $(window).scrollTop();
 
 $(function(){
 	lazyload();
+	get_faqs();
 
 	$('.input-tel').mask('(00) 0000-00000');
 
@@ -77,6 +78,45 @@ $(document).on("scroll",function(){
 	position = scroll;
 
 });
+
+//Faqs
+function get_faqs(){
+	$.ajax({
+        url: './models/getFaqs.php',
+        cache: false,
+        async: true,
+            success: function(response) {
+	
+				if(response){
+					var resposta = response.split("#.#");
+					resposta.pop();
+					console.log(resposta);
+
+					for(var i = 0; i < resposta.length; i++){
+						let thisResp = resposta[i].split(',');
+
+						let pai = document.getElementsByClassName("card-body")[0];
+						let geral = document.createElement("div");
+						let title = document.createElement("h4");
+						let content = document.createElement("p");
+
+						geral.className = "duvida-item col-12 duvida-"+thisResp[0];
+						title.className = "title-duvida title-"+thisResp[0];
+						content.className = "text-duvida duvida-"+thisResp[0];
+
+						title.innerHTML = thisResp[1];
+						content.innerHTML = thisResp[2];
+
+						geral.appendChild(title);
+						geral.appendChild(content);
+
+						pai.appendChild(geral);
+					}
+				}
+                
+            }
+    });
+}
 
 //Formulário de contato
 function contactSubmited(e){
