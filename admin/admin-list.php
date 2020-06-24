@@ -54,9 +54,9 @@ if($total_news){
                 <h2 class="brand-name">Fantin & Imhoff</h2>
             </a>
 
-            <span style="text-align: end; width:20%; color:white;">A página do administrador</span>
+            <span class="title-page">A página do administrador</span>
 
-            <a href="../index.html" style="text-align: end; width:50%;">Ir para o site</a>
+            <a href="../index.html" class="ls-btn ls-btn-lg ls-btn-block link-site">Ir para o site</a>
         </div>
 
         <main>
@@ -89,7 +89,7 @@ if($total_news){
                                         echo "<tr id=row-cadastros-" . $value['id'] . "><td id=cad-nome-" . $value['id'] . ">" . $value['nome'] . "</td>";
                                         echo "<td id=cad-tel-" . $value['id'] . " class='hidden-xs'>" . $value['telefone'] . "</td>";
                                         echo "<td id=cad-msg-" . $value['id'] . ">" . $value['mensagem'] . "</td>";
-                                        echo "<td id=cad-excluir-" . $value['id'] . "><span onclick = excluir(" . $value['id'] . ",\"cadastros\") class=\"ls-ico-remove ls-cursor-pointer ls-btn-dark\" title=\"Excluir\"></span></td>";  
+                                        echo "<td id=cad-excluir-" . $value['id'] . " class=\"exclude-items\"><span onclick = excluir(" . $value['id'] . ",\"cadastros\") class=\"ls-ico-remove ls-cursor-pointer ls-btn-dark\" title=\"Excluir\"></span></td>";  
                                     }
                                 ?>
 
@@ -115,7 +115,7 @@ if($total_news){
                                     foreach ($return_news as $key => $value) {
                                         echo "<tr id=row-newsletter-" . $value['id'] . "><td id=news-email-" . $value['id'] . ">" . $value['email'] . "</td>";
                                         echo "<td id=news-enviado-" . $value['id'] . " class='hidden-xs'>" . $value['enviado'] . "</td>";
-                                        echo "<td id=news-excluir-" . $value['id'] . "><span onclick = excluir(" . $value['id'] . ",\"newsletter\") class=\"ls-ico-remove ls-cursor-pointer ls-btn-dark\" title=\"Excluir\"></span></td>";        
+                                        echo "<td id=news-excluir-" . $value['id'] . " class=\"exclude-items\"><span onclick = excluir(" . $value['id'] . ",\"newsletter\") class=\"ls-ico-remove ls-cursor-pointer ls-btn-dark\" title=\"Excluir\"></span></td>";        
                                     }
                                 ?>
 

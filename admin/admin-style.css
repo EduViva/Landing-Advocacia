@@ -1,3 +1,27 @@
+@media (max-width: 768px){
+    .exclude-items{
+        padding-left: 0 !important;
+    }
+    .title-page, .link-site{
+        width: 50% !important;
+        text-align: center !important;
+    }
+    .title-page{
+        font-size: 11pt;
+    }
+    .link-site{
+        height: 30px;
+        padding: 3px !important;
+    }
+}
+@media (min-width: 769px){
+    .link-site{
+        width: 15% !important;
+    }
+    .title-page{
+        margin-right: 30%;
+    }
+}
 *{
     margin: 0;
     padding: 0;
@@ -9,17 +33,28 @@
     --complementar-2: #6D7275;
     --last-color: whitesmoke;
 }
+body{
+    background-color: rgba(0,0,0,.08) !important;
+}
 .navbar a h2{
     display: inline-block;
     line-height: 47px;
     margin-left: 12px;
 }
 .navbar{
-    background-image: linear-gradient(to bottom, var(--secondary-color), var(--primary-color));
-    /*box-shadow: -2px 1.5px 20px var(--complementar-2);*/
+    background-color: var(--complementar-2);
     width: 100%;
     font-size: 13.5pt;
     z-index: 99;
+    box-shadow: black -2px 1.5px 10px;
+}
+.title-page{
+    text-align: end; 
+    width:20%; 
+    color:white;
+}
+main{
+    margin-top: 15px;
 }
 label{
     display: block !important;

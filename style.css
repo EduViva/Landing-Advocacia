@@ -378,18 +378,17 @@ nav a h2{
     line-height: 47px;
     margin-left: 12px;
 }
-
-/*Topbar nav rgba(255, 251, 219)*/
 nav{
-    background-image: linear-gradient(to bottom, var(--secondary-color), var(--primary-color));
-    /*box-shadow: -2px 1.5px 20px var(--complementar-2);*/
+    background: #dadada;
+    box-shadow: -2px 1.5px 20px black;
     position: fixed !important;
     width: 100%;
     font-size: 13.5pt;
     z-index: 99;
 }
 .nav-item{
-    color: var(--last-color);
+    color: black;
+    font-weight: bold;
     transition: .2s;
 }
 .nav-item:hover{
@@ -398,10 +397,6 @@ nav{
 }
 .nav-active{
     color: rgba(0,0,0,.9);
-}
-.scrolled{
-    color: black;
-    font-weight: bold;
 }
 
 /*Sections*/
