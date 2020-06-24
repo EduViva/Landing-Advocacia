@@ -128,7 +128,7 @@ if($total_news){
                             
                         <?php
                             foreach ($return_faq as $key => $value) {
-                                echo '<div class="ls-list" data-id="'.$value['id'].'">';
+                                echo '<div class="ls-list" id="row-faq-'.$value['id'].'" data-id="'.$value['id'].'">';
                                 echo    '<header class="ls-list-header">';
                                 echo        '<div class="ls-list-title col-md-9">';
                                 echo            '<label for="faq-title-'.$value['id'].'" class="col-10">Título</label>';
@@ -138,7 +138,10 @@ if($total_news){
                                 echo            '<textarea id="faq-content-'.$value['id'].'" type="text" maxlength="500" rows="6" class="content-faq col-10">'.$value['conteudo'].'</textarea>';
                                 echo        '</div>';
                                 echo        '<div class="col-md-3 ls-txt-center">';
-                                echo            '<a href="javascript:void(0)" onclick=salvar(' . $value["id"] . ') class="ls-btn-primary link-salvar">Salvar</a>';
+                                echo            '<a href="javascript:void(0)" onclick=salvar(' . $value["id"] . ',\'save\') class="ls-btn-primary link-salvar">Salvar</a>';
+                                echo        '</div>';
+                                echo        '<div class="col-md-3 ls-txt-center">';
+                                echo            '<a href="javascript:void(0)" onclick=excluir(' . $value["id"] . ',\'faq\') class="ls-btn-dark ls-ico-remove link-salvar">Excluir</a>';
                                 echo        '</div>';
                                 echo    '</header>';
                                 echo '</div>';
@@ -154,7 +157,7 @@ if($total_news){
 
                 <div class="ls-alert-success ls-alert-fixed-bottom alert-callback alert-certo">
                     <span data-ls-module="dismiss" class="ls-dismiss">&times;</span>
-                    <strong>Sucesso!</strong> O item foi excluído!
+                    <strong>Sucesso!</strong> <span class="message-certo"></span>
                 </div>
 
                 <div class="ls-alert-danger ls-alert-fixed-bottom alert-callback alert-erro">

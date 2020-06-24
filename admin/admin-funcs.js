@@ -19,6 +19,7 @@ function excluir(id, table){
                 
                 if (response == true) {
                     document.getElementById("row-"+table+"-"+id).style.display = "none";
+                    $('.message-certo').html('Item excluido!');
                     $('.alert-certo').css('display','block');
                 } else {
                     $('.message-error').html('Não consegui excluir o item!');
@@ -31,7 +32,7 @@ function excluir(id, table){
     }
 }
 
-function salvar(id){
+function salvar(id, comportamento){
 
     $title = $('#faq-title-'+id)[0].value;
     $content = $('#faq-content-'+id)[0].value;
@@ -42,7 +43,8 @@ function salvar(id){
         data: {
             'id': id,
             'title': $title,
-            'content': $content
+            'content': $content,
+            'behavior': comportamento
         },
         cache: false,
         async: true,
@@ -51,6 +53,7 @@ function salvar(id){
                 console.log(response);
                 
                 if (response == true) {
+                    $('.message-certo').html('Item salvo!');
                     $('.alert-certo').css('display','block');
                 } else {
                     $('.message-error').html('Não consegui salvar o item!');
@@ -64,22 +67,10 @@ function salvar(id){
 }
 
 function addField(){
-    /*echo '<div class="ls-list">';
-    echo    '<header class="ls-list-header">';
-    echo        '<div class="ls-list-title col-md-9">';
-    echo            '<label for="faq-title-'.$value['id'].'" class="col-10">Título</label>';
-    echo            '<input id="faq-title-'.$value['id'].'" maxlength="65" type="text" value="'.$value['titulo'].'" class="title-faq col-10">';
-    echo            '<br>';
-    echo            '<label for="faq-content-'.$value['id'].'" class="label-content col-10">Conteúdo</label>';
-    echo            '<textarea id="faq-content-'.$value['id'].'" type="text" maxlength="500" rows="6" class="content-faq col-10">'.$value['conteudo'].'</textarea>';
-    echo        '</div>';
-    echo        '<div class="col-md-3 ls-txt-center">';
-    echo            '<a href="javascript:void(0)" onclick=salvar(' . $value["id"] . ') class="ls-btn-primary link-salvar">Salvar</a>';
-    echo        '</div>';
-    echo    '</header>';
-    echo '</div>';*/
 
-    let pai = $('#faq_cont');
+    let pai = document.getElementById('faq_cont');
+    let butAdd = document.getElementsByClassName('button-add')[0];
+
     let geral = document.createElement('div');
     let cabeça = document.createElement('header');
     let divInputs = document.createElement('div');
@@ -102,7 +93,7 @@ function addField(){
     save.className = "ls-btn-primary link-salvar";
 
     let atualLists = document.getElementsByClassName('ls-list');
-    let newId = atualLists[atualLists.length-1].attributes['data-id'].value + 1;
+    let newId = Number(atualLists[atualLists.length-1].attributes['data-id'].value) + 1;
 
     labelTitle.htmlFor = `faq-title-${newId}`;
     labelTitle.innerHTML = "Título";
@@ -110,15 +101,17 @@ function addField(){
     inputTitle.id = `faq-title-${newId}`;
     inputTitle.maxLength = 65;
 
-    labelCont = `faq-content-${newId}`;
+    labelCont.htmlFor = `faq-content-${newId}`;
     labelCont.innerHTML = "Conteúdo";
 
     textCont.id = `faq-content-${newId}`;
     textCont.maxLength = 500;
     textCont.rows = 6;
 
-    save.onclick = salvar(newId);
+    save.onclick = () => {salvar(newId, 'create')};
     save.innerHTML = "Salvar";
+
+    geral.setAttribute('data-id', newId);
 
     divInputs.appendChild(labelTitle);
     divInputs.appendChild(inputTitle);
@@ -133,5 +126,5 @@ function addField(){
 
     geral.appendChild(cabeça);
 
-    pai.appendChild(geral);
+    pai.insertBefore(geral, butAdd);
 }
