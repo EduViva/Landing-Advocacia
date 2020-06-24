@@ -128,7 +128,7 @@ if($total_news){
                             
                         <?php
                             foreach ($return_faq as $key => $value) {
-                                echo '<div class="ls-list">';
+                                echo '<div class="ls-list" data-id="'.$value['id'].'">';
                                 echo    '<header class="ls-list-header">';
                                 echo        '<div class="ls-list-title col-md-9">';
                                 echo            '<label for="faq-title-'.$value['id'].'" class="col-10">Título</label>';
@@ -144,6 +144,9 @@ if($total_news){
                                 echo '</div>';
                             }
                         ?>
+                        <div class="button-add">
+                            <button type="button" class="btn btn-outline-info" onclick="addField()"><b>+</b> Adicionar FAQ</button>
+                        </div>
                                 
                     </div>
                 

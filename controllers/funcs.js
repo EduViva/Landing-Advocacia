@@ -112,6 +112,7 @@ function get_faqs(){
 
 						pai.appendChild(geral);
 					}
+					$('.handler').remove();
 				}
                 
             }

@@ -42,3 +42,6 @@ input{
 .alert-callback{
     display: none;
 }
+.button-add{
+    text-align: center;
+}
