@@ -2,7 +2,7 @@ var req;
 
 function excluir(id, table){
 
-    if (confirm("Deseja realmente deletar este cliente?")){
+    if (confirm("Deseja realmente excluir este item?")){
         
         $.ajax({
             url: './models/excluir.php',
@@ -37,30 +37,38 @@ function salvar(id, comportamento){
     $title = $('#faq-title-'+id)[0].value;
     $content = $('#faq-content-'+id)[0].value;
 
-    $.ajax({
-        url: './models/salvar.php',
-        type: "POST",
-        data: {
-            'id': id,
-            'title': $title,
-            'content': $content,
-            'behavior': comportamento
-        },
-        cache: false,
-        async: true,
-            success: function(response) {
-    
-                console.log(response);
-                
-                if (response == true) {
-                    $('.message-certo').html('Item salvo!');
-                    $('.alert-certo').css('display','block');
-                } else {
-                    $('.message-error').html('Não consegui salvar o item!');
-                    $('.alert-erro').css('display','block');
+    if($title == "" || $content == ""){
+
+        $('.message-error').html('Você não pode salvar uma FAQ vazia!');
+        $('.alert-erro').css('display','block');
+
+    } else {
+
+        $.ajax({
+            url: './models/salvar.php',
+            type: "POST",
+            data: {
+                'id': id,
+                'title': $title,
+                'content': $content,
+                'behavior': comportamento
+            },
+            cache: false,
+            async: true,
+                success: function(response) {
+        
+                    console.log(response);
+                    
+                    if (response == true) {
+                        $('.message-certo').html('FAQ salva!');
+                        $('.alert-certo').css('display','block');
+                    } else {
+                        $('.message-error').html('Não consegui salvar a FAQ!');
+                        $('.alert-erro').css('display','block');
+                    }
                 }
-            }
-    });
+        });
+    }
 
     window.setTimeout(() => {$('.alert-callback').css('display','none');}, 5500);
 
@@ -93,7 +101,13 @@ function addField(){
     save.className = "ls-btn-primary link-salvar";
 
     let atualLists = document.getElementsByClassName('ls-list');
-    let newId = Number(atualLists[atualLists.length-1].attributes['data-id'].value) + 1;
+    console.log(atualLists);
+
+    if(atualLists.length > 0){
+        var newId = Number(atualLists[atualLists.length-1].attributes['data-id'].value) + 1;
+    } else {
+        var newId = 1;
+    }
 
     labelTitle.htmlFor = `faq-title-${newId}`;
     labelTitle.innerHTML = "Título";

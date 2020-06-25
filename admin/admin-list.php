@@ -16,6 +16,16 @@ $return_faq = $db->query($Q_faq);
 
 echo '<link rel="stylesheet" href="./admin-style.css">';
 echo '<script src="./admin-funcs.js"></script>';
+echo 
+'<link rel="apple-touch-icon" sizes="180x180" href="../sources/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../sources/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../sources/favicon/favicon-16x16.png">
+<link rel="manifest" href="../sources/favicon/site.webmanifest">
+<link rel="mask-icon" href="s../ources/favicon/safari-pinned-tab.svg" color="#656565">
+<meta name="apple-mobile-web-app-title" content="Fantin &amp; Imhoff">
+<meta name="application-name" content="Fantin &amp; Imhoff">
+<meta name="msapplication-TileColor" content="#00aba9">
+<meta name="theme-color" content="#ffffff">';
 
 /*
 $total_cad = $db->query("SELECT COUNT(*) FROM cadastros");

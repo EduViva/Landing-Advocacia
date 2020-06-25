@@ -12,15 +12,6 @@
         font-size: 28pt !important;
         top: 45% !important;
     }
-    .nav-items .links{
-        flex-wrap: wrap;
-        text-align: center;
-    }
-    .nav-item{
-        flex-basis: 50%;
-        padding-top: 0;
-        padding-bottom: 0;
-    }
 }
 @media(max-width: 375px){
     .text-equipe p{
@@ -30,7 +21,16 @@
         padding-left: 0;
         padding-right: 0;
         font-size: 11pt;
-    }  
+    }
+    .nav-items .links{
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .nav-item{
+        flex-basis: 50%;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
 }
 @media(max-width: 425px){
     #img-bg{
@@ -194,6 +194,10 @@
         padding-left: 0;
         padding-right: 0;
     }
+    /*Página 404*/
+    .error-main{
+        padding-top: 23vh;
+    }
 }
 @media(min-width: 769px){
     nav{
@@ -282,6 +286,9 @@
     }
     footer{
         height: 7vh;
+    }
+    .error-main{
+        padding-top: 15vh;
     }
 }
 @media(min-width: 768px) and (max-width: 991.98px){
@@ -533,6 +540,12 @@ section{
 .duvida-item:nth-child(even){
     background: #EEE;
 }
+.handler-faqs{
+    text-align: center;
+}
+.handler-faqs img{
+    max-height: 200px;
+}
 
 /*Section contact footer*/
 .section-contact-footer{
@@ -736,4 +749,9 @@ footer{
 #modal-success{
     background-color: var(--primary-color);
     border: 1px solid var(--complementar-1);
+}
+
+/*Página 404*/
+.error-main{
+    text-align: center;
 }
