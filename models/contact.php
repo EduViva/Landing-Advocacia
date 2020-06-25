@@ -83,7 +83,7 @@
     //Enviando o e-mail para o administrador//
     //////////////////////////////////////////
 
-    $myEmail = "contato@meudominio.com";//é necessário informar um e-mail do próprio domínio
+    $myEmail = "andersonimhoff@fantineimhoffadvogados.com.br";//é necessário informar um e-mail do próprio domínio
     $headers = "From: $myEmail\r\n";
     $headers .= "Reply-To: $myEmail\r\n";
 
@@ -97,7 +97,7 @@
     $corpo .= "Email: " . $mail . "\n";
     $corpo .= "Mensagem: " . $msg . "\n";
 
-    $email_to = 'seu e-mail aqui que irá receber a mensagem';
+    $email_to = 'andersonimhoff@fantineimhoffadvogados.com.br';
     //não esqueça de substituir este email pelo seu.
 
     $status = mail($email_to, $subject, $corpo, $headers);
