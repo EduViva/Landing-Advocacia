@@ -92,7 +92,7 @@
     $subject = "Um novo contato foi cadastrado no site";
 
     $corpo = "Olá, um novo contato foi cadastrado no site\n";
-    $corpo .= "Nome: " . $$nome . "\n";
+    $corpo .= "Nome: " . $nome . "\n";
     $corpo .= "Telefone: " . $telefone . "\n";
     $corpo .= "Email: " . $mail . "\n";
     $corpo .= "Mensagem: " . $msg . "\n";

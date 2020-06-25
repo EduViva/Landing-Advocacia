@@ -90,7 +90,6 @@ function get_faqs(){
 				if(response){
 					var resposta = response.split("#.#");
 					resposta.pop();
-					console.log(resposta);
 
 					for(var i = 0; i < resposta.length; i++){
 						let thisResp = resposta[i].split(',');
@@ -166,8 +165,6 @@ function sendMessage(message,targetForm){
 	  	success: function(response) {
 			$(`.send-${targetForm}`).html("Enviar");
 			$(".submit-form").attr("disabled", false);
-
-			console.log(response);
 			
 			if (response) {
 				$(`#response-${targetForm}`).html({
