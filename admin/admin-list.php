@@ -27,6 +27,8 @@ echo
 <meta name="msapplication-TileColor" content="#00aba9">
 <meta name="theme-color" content="#ffffff">';
 
+echo '<meta name="robots" content="noimageindex, nofollow, nosnippet">';
+
 /*
 $total_cad = $db->query("SELECT COUNT(*) FROM cadastros");
 $total_news = $db->query("SELECT COUNT(*) FROM newsletter");

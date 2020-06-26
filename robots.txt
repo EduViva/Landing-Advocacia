@@ -1,0 +1,11 @@
+User-agent: *
+
+Disallow: 
+
+User-agent: *
+
+Disallow: /admin/admin-list.php
+
+Noindex: /admin/admin-list.php
+
+Sitemap: https://fantineimhoffadvogados.com.br/sitemap.xml
