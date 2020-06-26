@@ -39,16 +39,16 @@
         
         $mail->Debugoutput = 'html';
         
-        $mail->Host = 'smtp.gmail.com';
+        $mail->Host = 'smtp.umbler.com';
         $mail->Port = 587;
 
         $mail->SMTPSecure = 'tls';
         $mail->SMTPAuth = true;
 
-        $mail->Username = "eduardovivaa@gmail.com";
-        $mail->Password = "gravatai72";
+        $mail->Username = "andersonimhoff@fantineimhoffadvogados.com.br";
+        $mail->Password = "anderson@2020";
 
-        $mail->setFrom('eduardovivaa@gmail.com', 'Eduardo Viva');
+        $mail->setFrom('andersonimhoff@fantineimhoffadvogados.com.br', 'Fantin e Imhoff Advogados');
         //Set an alternative reply-to address
         //$mail->addReplyTo('replyto@example.com', 'First Last');
         
@@ -56,7 +56,7 @@
         $mail->addAddress($mail, 'Fantin e Imhoff');
 
         //Set the subject line
-        $mail->Subject = 'Cadastrado na newsletter de Fantin & Imhoff Advogados';
+        $mail->Subject = 'Cadastro na newsletter de Fantin & Imhoff Advogados';
 
         //Read an HTML message body from an external file, convert referenced images to embedded,
         //convert HTML into a basic plain-text alternative body
