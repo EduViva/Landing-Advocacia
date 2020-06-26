@@ -1,5 +1,7 @@
 <?php
 
+    require './dbAccess.php';
+
     date_default_timezone_set('America/Sao_Paulo');
 
     $arr = $_POST['message'];
@@ -38,7 +40,8 @@
 
         $corpo = "Olá!\n";
         $corpo .= "\n";
-        $corpo .= "Seja bem Vindo\n";
+        $corpo .= "Seja bem Vindo.\n";
+        $corpo .= "\n";
         $corpo .= "Você está cadastrado na newsletter de Fantin & Imhoff Advogados\n";
     
         $email_to = $email;

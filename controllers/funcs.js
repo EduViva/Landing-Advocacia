@@ -126,8 +126,6 @@ function contactSubmited(e){
 	$(`.send-${targetForm}`).html("Enviando...");
 	$(".submit-form").attr("disabled", true);
 
-	console.log(targetForm);
-
 	if(targetForm == "contact-upper"){
 		var nome = $('.input-nome')[0].value;
 		var tel = $('.input-tel')[0].value;
@@ -139,7 +137,6 @@ function contactSubmited(e){
 		var local = 'message';
 	} else {
 		var mail = $('.input-news').val();
-		console.log(mail);
 		var local = 'news';
 	}
   
@@ -165,7 +162,7 @@ function sendMessage(message,targetForm){
 	  	success: function(response) {
 			$(`.send-${targetForm}`).html("Enviar");
 			$(".submit-form").attr("disabled", false);
-			console.log(response);
+
 			if (response) {
 				$(`#response-${targetForm}`).html({
 					'contact-upper': 'Dados enviados com sucesso!',
