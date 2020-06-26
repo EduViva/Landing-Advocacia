@@ -86,6 +86,8 @@
     $myEmail = "andersonimhoff@fantineimhoffadvogados.com.br";//é necessário informar um e-mail do próprio domínio
     $headers = "From: $myEmail\r\n";
     $headers .= "Reply-To: $myEmail\r\n";
+    //endereços que receberão uma copia oculta
+    //$headers .= "Bcc: vinnie@criarweb.com,joao@criarweb.com";
 
     /*abaixo contém os dados que serão enviados para o email
     cadastrado para receber o formulário*/
