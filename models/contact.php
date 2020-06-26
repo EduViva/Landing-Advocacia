@@ -7,11 +7,11 @@
     $nome = !(empty($arr['name'])) ? $arr['name'] : "";
     $telefone = !(empty($arr['telefone'])) ? $arr['telefone'] : "";
     $msg = !(empty($arr['message'])) ? $arr['message'] : "";
-    $mail = !(empty($arr['mail'])) ? $arr['mail'] : "";
+    $email = !(empty($arr['mail'])) ? $arr['mail'] : "";
     $local = $arr['local'];
 
     if($local == 'news'){
-        $query = "INSERT INTO `newsletter`(email) VALUES ('" . $mail ."')";
+        $query = "INSERT INTO `newsletter`(email) VALUES ('" . $email ."')";
     } else {
         $query = "INSERT INTO `cadastros`(nome, telefone, mensagem) VALUES 
         ('" . $nome ."','" . $telefone ."','" . $msg ."')";
@@ -45,15 +45,15 @@
         $mail->SMTPSecure = 'tls';
         $mail->SMTPAuth = true;
 
-        $mail->Username = "andersonimhoff@fantineimhoffadvogados.com.br";
-        $mail->Password = "anderson@2020";
+        $mail->Username = $mailUser;
+        $mail->Password = $mailPass;
 
-        $mail->setFrom('andersonimhoff@fantineimhoffadvogados.com.br', 'Fantin e Imhoff Advogados');
+        $mail->setFrom($mailUser, 'Fantin e Imhoff Advogados');
         //Set an alternative reply-to address
         //$mail->addReplyTo('replyto@example.com', 'First Last');
         
         //Set who the message is to be sent to
-        $mail->addAddress($mail, 'Fantin e Imhoff');
+        $mail->addAddress($email, 'Fantin e Imhoff');
 
         //Set the subject line
         $mail->Subject = 'Cadastro na newsletter de Fantin & Imhoff Advogados';
@@ -70,7 +70,9 @@
         //$mail->addAttachment('images/phpmailer_mini.png');
 
         //send the message, check for errors
-        if (!$mail->send()) {
+        $ret = $mail->send();
+        echo $ret;
+        if (!$ret) {
            $sql = "UPDATE `newsletter` SET enviado = 'Não' WHERE id = '". $lastId . "'";
         } else {
             $sql = "UPDATE `newsletter` SET enviado = 'Sim' WHERE id = '". $lastId . "'";
@@ -83,7 +85,7 @@
     //Enviando o e-mail para o administrador//
     //////////////////////////////////////////
 
-    $myEmail = "andersonimhoff@fantineimhoffadvogados.com.br";//é necessário informar um e-mail do próprio domínio
+    $myEmail = $mailUser;//é necessário informar um e-mail do próprio domínio
     $headers = "From: $myEmail\r\n";
     $headers .= "Reply-To: $myEmail\r\n";
     //endereços que receberão uma copia oculta
@@ -96,10 +98,10 @@
     $corpo = "Olá, um novo contato foi cadastrado no site\n";
     $corpo .= "Nome: " . $nome . "\n";
     $corpo .= "Telefone: " . $telefone . "\n";
-    $corpo .= "Email: " . $mail . "\n";
+    $corpo .= "Email: " . $email . "\n";
     $corpo .= "Mensagem: " . $msg . "\n";
 
-    $email_to = 'andersonimhoff@fantineimhoffadvogados.com.br';
+    $email_to = $mailUser;
     //não esqueça de substituir este email pelo seu.
 
     $status = mail($email_to, $subject, $corpo, $headers);

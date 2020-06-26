@@ -165,7 +165,7 @@ function sendMessage(message,targetForm){
 	  	success: function(response) {
 			$(`.send-${targetForm}`).html("Enviar");
 			$(".submit-form").attr("disabled", false);
-			
+			console.log(response);
 			if (response) {
 				$(`#response-${targetForm}`).html({
 					'contact-upper': 'Dados enviados com sucesso!',
