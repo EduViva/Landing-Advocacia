@@ -30,11 +30,12 @@
 
     if($local == 'news'){
     
-        $myEmail = $mailUser;//é necessário informar um e-mail do próprio domínio
+        $myEmail = $mailUser;
+        
         $headers = "From: $myEmail\r\n";
         $headers .= "Reply-To: $myEmail\r\n";
-        $headers  = 'MIME-Version: 1.0' . "\r\n";
-        $headers = 'Content-Type: text/plain; charset=utf-8' . "\r\n";
+        $headers .= 'MIME-Version: 1.0' . "\r\n";
+        $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 
         /*abaixo contém os dados que serão enviados para o email
         cadastrado para receber o formulário*/
@@ -53,10 +54,10 @@
                 <br><br>
                 <p>Você pode entrar em contato através do <a href="http://wa.me/51999865349">WhatsApp (51)99986-5349</a></p>
                 <br><hr><br>
+
+                <small>Não esqueça de nos seguir nas redes sociais para ficar por dentro das novidades</small>
+                
                 <table style="margin:auto">
-                    <tr>
-                        <small>Não esqueça de nos seguir nas redes sociais para ficar por dentro</small>
-                    </tr>
                     <tr></tr>
                     <tr>
                         <td>
@@ -76,8 +77,7 @@
         ';
     
         $email_to = $email;
-        //não esqueça de substituir este email pelo seu.
-
+        
         $status = mail($email_to, $subject, $corpo, $headers);
         //enviando o email.
         

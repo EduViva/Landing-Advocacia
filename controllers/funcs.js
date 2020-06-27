@@ -121,9 +121,14 @@ function get_faqs(){
 //Formulário de contato
 function contactSubmited(e){
 	e.preventDefault();
-	
+
 	var targetForm = e.target.id;
-	$(`.send-${targetForm}`).html("Enviando...");
+	$(`.send-${targetForm}`).html("");
+
+	$(`<div class="spinner-border" role="status">
+		<span class="sr-only">Loading...</span>
+	</div>`).appendTo($(`.send-${targetForm}`));
+	
 	$(".submit-form").attr("disabled", true);
 
 	if(targetForm == "contact-upper"){
@@ -139,7 +144,7 @@ function contactSubmited(e){
 		var mail = $('.input-news').val();
 		var local = 'news';
 	}
-  
+
 	let data = {
 		name: nome,
 		telefone: tel,
