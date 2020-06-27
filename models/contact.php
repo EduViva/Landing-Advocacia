@@ -33,16 +33,47 @@
         $myEmail = $mailUser;//é necessário informar um e-mail do próprio domínio
         $headers = "From: $myEmail\r\n";
         $headers .= "Reply-To: $myEmail\r\n";
+        $headers  = 'MIME-Version: 1.0' . "\r\n";
+        $headers = 'Content-Type: text/plain; charset=utf-8' . "\r\n";
 
         /*abaixo contém os dados que serão enviados para o email
         cadastrado para receber o formulário*/
-        $subject = "Um novo contato foi cadastrado no site";
+        $subject = "Cadastro em Fantin & Imhoff Advogados";
 
-        $corpo = "Olá!\n";
-        $corpo .= "\n";
-        $corpo .= "Seja bem Vindo.\n";
-        $corpo .= "\n";
-        $corpo .= "Você está cadastrado na newsletter de Fantin & Imhoff Advogados\n";
+        $corpo = '
+        <html>
+            <head>
+                <title>Bem vindo à Fantin & Imhoff Advogados</title>
+            </head>
+            <body style="text-align: center; font-size: 13pt;font-family: Arial, Helvetica, sans-serif; padding: 15px; background-color: #dcdcdc;">
+                <h4>Você está cadastrado na Newsletter de Fantin & Imhoff Advogados</h4>
+                <hr><br>
+                <p>Estamos ansiosos para compartilhar com você</p>
+                <p>as novidades e informações do ramo advocatício.</p>
+                <br><br>
+                <p>Você pode entrar em contato através do <a href="http://wa.me/51999865349">WhatsApp (51)99986-5349</a></p>
+                <br><hr><br>
+                <table style="margin:auto">
+                    <tr>
+                        <small>Não esqueça de nos seguir nas redes sociais para ficar por dentro</small>
+                    </tr>
+                    <tr></tr>
+                    <tr>
+                        <td>
+                            <a href="https://www.facebook.com/fantineimhoffadvogados/">
+                                <img style="height: 35px;" src="http://fantineimhoffadvogados.com.br/sources/face-icon.png" alt="Facebook">
+                            </a>
+                        </td>
+                        <td>
+                            <a href="https://www.instagram.com/fantineimhoffadvogados/">
+                                <img style="height: 35px;" src="http://fantineimhoffadvogados.com.br/sources/insta-icon.png" alt="Instagram">
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </body>
+        </html>
+        ';
     
         $email_to = $email;
         //não esqueça de substituir este email pelo seu.
