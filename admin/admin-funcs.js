@@ -1,4 +1,5 @@
 var req;
+var created = new Array();
 
 function excluir(id, table){
 
@@ -39,10 +40,16 @@ function salvar(id, comportamento){
 
     if($title == "" || $content == ""){
 
-        $('.message-error').html('Você não pode salvar uma FAQ vazia!');
+        $('.message-error').html('Você não pode salvar uma FAQ incompleta!');
         $('.alert-erro').css('display','block');
 
     } else {
+
+        for(let ide of created){
+            if(ide == id){
+                comportamento = 'save';
+            }
+        }
 
         $.ajax({
             url: './models/salvar.php',
@@ -56,9 +63,6 @@ function salvar(id, comportamento){
             cache: false,
             async: true,
                 success: function(response) {
-        
-                    console.log(response);
-                    
                     if (response == true) {
                         $('.message-certo').html('FAQ salva!');
                         $('.alert-certo').css('display','block');
@@ -68,6 +72,7 @@ function salvar(id, comportamento){
                     }
                 }
         });
+        created.push(id);
     }
 
     window.setTimeout(() => {$('.alert-callback').css('display','none');}, 5500);
@@ -101,7 +106,6 @@ function addField(){
     save.className = "ls-btn-primary link-salvar";
 
     let atualLists = document.getElementsByClassName('ls-list');
-    console.log(atualLists);
 
     if(atualLists.length > 0){
         var newId = Number(atualLists[atualLists.length-1].attributes['data-id'].value) + 1;

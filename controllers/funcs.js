@@ -53,9 +53,6 @@ $(function(){
 		
 				const link = `https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d55297.42109040757!2d-51.08231563761302!3d-29.976877367600313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d-29.949793699999997!2d-50.9781567!4m5!1s0x95197540a82133f7%3A0x12a677ecb2d27ab1!2sMarcos%20Fantin%20Pessoa%20-%20Av.%20Pres.%20Get%C3%BAlio%20Vargas%2C%202.394%20-%20Centro%2C%20Alvorada%20-%20RS%2C%2094810-001!3m2!1d-${lat}!2d-${long}!5e0!3m2!1spt-BR!2sbr!4v1591450335761!5m2!1spt-BR!2sbr`;
 				document.getElementById("map").src = link;
-				
-				let box = document.getElementById("box");
-				box.remove();
 			   
 			});
 		}
@@ -150,8 +147,7 @@ function contactSubmited(e){
 		telefone: tel,
 		mail: mail,
 		message: msg,
-		local: local,
-		url: window.location.href
+		local: local
 	};
 
 	sendMessage(data,targetForm);

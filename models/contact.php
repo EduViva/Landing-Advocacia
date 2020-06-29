@@ -47,6 +47,7 @@
                 <title>Bem vindo à Fantin & Imhoff Advogados</title>
             </head>
             <body style="text-align: center; font-size: 13pt;font-family: Arial, Helvetica, sans-serif; padding: 15px; background-color: #dcdcdc;">
+                <div style="width: 100%; height: 20%; background: url(https://fantineimhoffadvogados.com.br/sources/direito_civil.jpg) no-repeat center; background-attachment: fixed;"></div>    
                 <h4>Você está cadastrado na Newsletter de Fantin & Imhoff Advogados</h4>
                 <hr><br>
                 <p>Estamos ansiosos para compartilhar com você</p>
