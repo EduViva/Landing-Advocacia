@@ -1,3 +1,13 @@
+
+
+function getSenha(senha){
+    let pass = senha;
+
+    if(!(prompt("Insira a senha") == pass)){
+        window.location.href = 'https://fantineimhoffadvogados.com.br/views/404.html';
+    }
+}
+
 var req;
 var created = new Array();
 
@@ -14,7 +24,7 @@ function excluir(id, table){
             },
             cache: false,
             async: true,
-              success: function(response) {
+            success: function(response) {
         
                 console.log(response);
                 
@@ -26,7 +36,7 @@ function excluir(id, table){
                     $('.message-error').html('Não consegui excluir o item!');
                     $('.alert-erro').css('display','block');
                 }
-              }
+            }
         });
 
         window.setTimeout(() => {$('.alert-callback').css('display','none');}, 5500);
@@ -146,3 +156,4 @@ function addField(){
 
     pai.insertBefore(geral, butAdd);
 }
+    

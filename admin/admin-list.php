@@ -16,6 +16,7 @@ $return_faq = $db->query($Q_faq);
 
 echo '<link rel="stylesheet" href="./admin-style.css">';
 echo '<script src="./admin-funcs.js"></script>';
+echo '<script>getSenha("placeholder")</script>';
 echo 
 '<link rel="apple-touch-icon" sizes="180x180" href="../sources/favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../sources/favicon/favicon-32x32.png">
@@ -27,23 +28,8 @@ echo
 <meta name="msapplication-TileColor" content="#00aba9">
 <meta name="theme-color" content="#ffffff">';
 
-echo '<meta name="robots" content="noimageindex, nofollow, nosnippet">';
+echo '<meta name="robots" content="noindex, nofollow, nosnippet">';
 
-/*
-$total_cad = $db->query("SELECT COUNT(*) FROM cadastros");
-$total_news = $db->query("SELECT COUNT(*) FROM newsletter");
-
-if($total_cad){
-  while ($row = $total_cad->fetch_assoc()) {
-    $cad_num = $row['COUNT(*)'];
-  }
-}
-if($total_news){
-    while ($row = $total_news->fetch_assoc()) {
-        $news_num = $row['COUNT(*)'];
-    }
-}
-*/
 ?>
 
 <!DOCTYPE html>
