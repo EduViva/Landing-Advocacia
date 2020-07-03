@@ -45,18 +45,17 @@
         background: #242424 !important;
         padding-top: 30px !important;
     }
-    /*section equipe*/
+    /*section equipe
     .section-equipe{
         margin-top: 8%;
-    }
+    }*/
     .img-equipe img{
         display: none;
     }
     .text-equipe{
         background-image: url(sources/opaque-logo.png);
-        background-position: center;
         background-repeat: no-repeat;
-        background-size: 70%;
+        background-size: 90%;
         height: 40vh;
         width: 95%;
         margin: auto;
@@ -66,7 +65,8 @@
     }
     .princ-text{
 		font-weight: bold;
-		font-size: 13.5pt;
+        font-size: 13.5pt;
+        margin-top: 16%;
     }
     .text-dados{
         margin: auto;
@@ -111,10 +111,10 @@
     .fazem{
         padding-bottom: 23px !important;
     }
-
+/*
     .col-img-bg{
         margin-bottom: 8vh !important;
-    }
+    }*/
     #img-bg{
         margin-top: 8vh !important;
     }
@@ -484,9 +484,10 @@ section{
 }
 
 /*Middle text*/
-.col-img-bg{
+
+/*.col-img-bg{
     margin-bottom: 15vh;
-}
+}*/
 #img-bg{
     background: url('sources/direito_civil.jpg') no-repeat center;
     background-attachment: fixed;
