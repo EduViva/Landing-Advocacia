@@ -46,14 +46,17 @@
         padding-top: 30px !important;
     }
     /*section equipe*/
+    .section-equipe{
+        margin-top: 8%;
+    }
     .img-equipe img{
         display: none;
     }
     .text-equipe{
-        background-image: url(sources/equipe.jpg);
-        background-position: top;
+        background-image: url(sources/opaque-logo.png);
+        background-position: center;
         background-repeat: no-repeat;
-        background-size: 100%;
+        background-size: 70%;
         height: 40vh;
         width: 95%;
         margin: auto;
@@ -124,13 +127,11 @@
 
     /*section equipe*/
     .section-equipe{
-        margin-top: 15%;
+        /*margin-top: 15%;*/
         margin-bottom: 8%;
     }
     .princ-text{
-        margin-top: 1.5rem;
         font-size: 14.9pt;
-        background: rgba(255,255,255,.4);
     }
     /*Section duvidas*/
     .bi-chevron-down{

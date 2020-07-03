@@ -1,12 +1,10 @@
-
-var position = $(window).scrollTop();
-
 $(function(){
 	lazyload();
 	get_faqs();
 
 	$('.input-tel').mask('(00) 0000-00000');
 
+	//Label no campo da newsletter
 	let input_news = document.getElementById('input-news');
 	input_news.addEventListener("input", () => {
 		if(input_news.value != ""){
@@ -16,6 +14,8 @@ $(function(){
 		}
 	});
 
+	/*
+	//Plugin Carrosel de clientes
 	$('.multiple-items').slick({
 		dots: false,
 		infinite: true,
@@ -42,7 +42,9 @@ $(function(){
 			}
 		]
 	});
-
+	*/
+	
+	//Modal como chegar
 	$('#modal-chegar').on('shown.bs.modal', function (e) {
 		
 		if(navigator.geolocation){
@@ -58,21 +60,6 @@ $(function(){
 		}
 
 	});
-
-});
-
-$(document).on("scroll",function(){
-
-	var scroll = $(window).scrollTop();
-
-
-	if (scroll >= 730){
-		$('#middle-text').css('color','var(--secondary-color)');
-	} else {
-		$('#middle-text').css('color','var(--last-color)');
-	}
-
-	position = scroll;
 
 });
 
