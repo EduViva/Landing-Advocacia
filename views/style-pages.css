@@ -40,6 +40,12 @@
     .section-contact-page, .section-quem-somos{
         padding-top: 25vh;
     }
+    #img2, #img3{
+        display: none;
+    }
+    .parent-img-somos{
+        padding: 0;
+    }
     .section-links-uteis{
         padding-top: 28vh;
     }
@@ -50,9 +56,6 @@
         padding-bottom: 20px;
         padding-top: 20px;
         height: 200px;
-    }
-    #img2, #img3{
-        display: none;
     }
 
 }
