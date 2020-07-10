@@ -41,7 +41,7 @@
     }
     /*section clientes*/
     .slider-clientes{
-        height: 210px !important;
+        height: 178.36px !important;
         background: #242424 !important;
         padding-top: 30px !important;
     }
@@ -123,6 +123,16 @@
         left: 0;
         font-size: 19pt;
         padding: 0 20px;
+    }
+
+    /*Section clientes*/
+    .multiple-items img{
+        height: 22vh;
+        width: 20vh;
+    }
+    #verde{
+        height: 12vh;
+        margin-top: 5vh;
     }
 
     /*section equipe*/
@@ -246,7 +256,15 @@
 
     /*section clientes*/
     .slider-clientes{
-        padding-top: 9.5vh;
+        padding-top: 6.8vh;
+    }
+    .multiple-items img{
+        height: 30vh;
+        width: 30vh;
+    }
+    #verde{
+        height: 20vh !important;
+        margin-top: 5vh;
     }
     /*section equipe*/
     .text-equipe{

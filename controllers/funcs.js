@@ -14,12 +14,11 @@ $(function(){
 		}
 	});
 
-	/*
 	//Plugin Carrosel de clientes
 	$('.multiple-items').slick({
 		dots: false,
 		infinite: true,
-		slidesToShow: 5,
+		slidesToShow: 4,
 		slidesToScroll: 2,
 		autoplay: true,
   		autoplaySpeed: 2500,
@@ -28,7 +27,7 @@ $(function(){
 			  breakpoint: 1024,
 			  settings: {
 					slidesToShow: 4,
-					slidesToScroll: 3,
+					slidesToScroll: 2,
 					infinite: true,
 					dots: false
 			  }
@@ -42,7 +41,6 @@ $(function(){
 			}
 		]
 	});
-	*/
 	
 	//Modal como chegar
 	$('#modal-chegar').on('shown.bs.modal', function (e) {
@@ -75,8 +73,10 @@ function get_faqs(){
 					var resposta = response.split("#.#");
 					resposta.pop();
 
+					console.log(resposta);
+
 					for(var i = 0; i < resposta.length; i++){
-						let thisResp = resposta[i].split(',');
+						let thisResp = resposta[i].split('*.*');
 
 						let pai = document.getElementsByClassName("card-body")[0];
 						let geral = document.createElement("div");
