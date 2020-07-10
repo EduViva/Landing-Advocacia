@@ -41,9 +41,9 @@
     }
     /*section clientes*/
     .slider-clientes{
-        height: 178.36px !important;
+        height: 32.8vh !important;
         background: #242424 !important;
-        padding-top: 30px !important;
+        padding-top: 5.4vh !important;
     }
     /*section equipe
     .section-equipe{
@@ -111,10 +111,9 @@
     .fazem{
         padding-bottom: 23px !important;
     }
-/*
     .col-img-bg{
         margin-bottom: 8vh !important;
-    }*/
+    }
     #img-bg{
         margin-top: 8vh !important;
     }
@@ -268,6 +267,9 @@
         margin-top: 5vh;
     }
     /*section equipe*/
+    .section-equipe{
+        margin-top: -5%;
+    }
     .text-equipe{
         margin-left: -30px;
         margin-right: 20px;
